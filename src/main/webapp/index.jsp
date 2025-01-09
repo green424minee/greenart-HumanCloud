@@ -12,26 +12,30 @@
 <body>
 	<div>
 		<header>
-			<a href="/_greenart_HumanCloudProject">HumanCloud</a>
-			<div class="search">
-				<form action="">
-					<label for=""></label>
-					<input type="text" name="" id="">
-					<input type="submit">
-				</form>
-			</div>
-			<a>기업서비스</a>
+			<ul>
+				<li><a href="/_greenart_HumanCloudProject">HumanCloud</a></li>
+				<li>
+					<div class="search">
+						<form action="">
+							<label for=""></label>
+							<input type="text" name="" id="" maxlength="30">
+							<input type="submit">
+						</form>
+					</div>
+				</li>
+				<li><a href="">기업서비스</a></li>
+			</ul>
 		</header>
 	</div>
 	<div>
-		<nav>
+		<nav class="navigation">
 			<a href="">전체 채용 리스트</a>
 			<a href="">이력서 관리</a>
 			<a href="">즐겨찾기</a>
 		</nav>
 	</div>
 	<div>
-		<ul>
+		<ul class="notice">
 			<li>
 			<li>
 			<li>
