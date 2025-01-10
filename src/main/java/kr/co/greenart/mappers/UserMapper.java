@@ -15,13 +15,13 @@ public interface UserMapper {
 	@Results(id = "userResults"
 			, value = {
 					@Result(column = "id", property = "id", id = true)
-					, @Result(column = "userid", property = "userid")
+					, @Result(column = "userid", property = "userId")
 					, @Result(column = "password", property = "password")
 			})
 	List<User> selectAll();
 	
 	@Insert("INSERT INTO user (userid, password, name, phone, email, address) "
-			+ "VALUES (#{userid}, #{password}, #{name}, #{phone}, #{email}, #{address})")
+			+ "VALUES (#{userId}, #{password}, #{name}, #{phone}, #{email}, #{address})")
 	int insertUser(User user);
 	
 	@Select("SELECT userid, password, name FROM user WHERE userid = #{userId}")
