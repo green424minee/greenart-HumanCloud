@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/HumanCloud/user/Signin")
 public class SigninServlet extends HttpServlet {
@@ -17,6 +18,22 @@ public class SigninServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		UserService service = UserService.getInstance();
+		String userId = req.getParameter("userid");
+		String password = req.getParameter("password");
+		
+		User user = service.selectById(userId);
+		if (user == null) {
+			req.setAttribute("message", "해당 id는 존재하지 않습니다. id를 확인해주세요.");
+			req.getRequestDispatcher("/WEB-INF/user_view/signin.jsp").forward(req, resp);
+		} else if (!password.equals(user.getPassword())) {
+			req.setAttribute("message", "비밀번호가 일치하지 않습니다. 비밀번호를 확인해주세요.");
+			req.getRequestDispatcher("/WEB-INF/user_view/signin.jsp").forward(req, resp);
+		} else {
+			// TODO login success
+			HttpSession session = req.getSession();
+			session.setAttribute("login", user.getName());
+			resp.sendRedirect("/_greenart_HumanCloud");
+		}
 	}
-	
 }

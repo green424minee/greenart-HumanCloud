@@ -27,7 +27,7 @@ public class SignupServlet extends HttpServlet {
 		String email = req.getParameter("email");
 		
 		if(ValidatorUtil.isPasswordMatch(password, passwordCheck)) {
-			User user = User.builder().name(name).userid(userId).password(password).phone(phone).email(email).build();
+			User user = User.builder().name(name).userId(userId).password(password).phone(phone).email(email).build();
 			service.insertUser(user);
 			req.getRequestDispatcher("/WEB-INF/user_view/signupResult.jsp").forward(req, resp);
 		} else {
