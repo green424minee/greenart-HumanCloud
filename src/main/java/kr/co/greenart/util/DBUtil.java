@@ -43,7 +43,7 @@ public class DBUtil {
 		TransactionFactory transactionFactory = new JdbcTransactionFactory();
 		Environment environment = new Environment("development", transactionFactory, dataSource);
 		Configuration configuration = new Configuration(environment);
-
+		configuration.addMappers("kr.co.greenart.mappers");
 		sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
 	}
 	
