@@ -8,6 +8,13 @@
   <description>그린컴퓨터 휴먼클라우드프로젝트</description>
   
   <dependencies>
+  	<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+	<dependency>
+	    <groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>
+	    <version>1.18.36</version>
+	    <scope>provided</scope>
+	</dependency>
   	<dependency>
 		<groupId>org.apache.commons</groupId>
 		<artifactId>commons-dbcp2</artifactId>
