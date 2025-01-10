@@ -13,7 +13,7 @@
 	<div>
 		<header>
 			<ul>
-				<li><a href="/_greenart_HumanCloudProject">HumanCloud</a></li>
+				<li><a href="/_greenart_HumanCloud">HumanCloud</a></li>
 				<li>
 					<div class="search">
 						<form action="">
@@ -32,6 +32,7 @@
 			<a href="">전체 채용 리스트</a>
 			<a href="">이력서 관리</a>
 			<a href="">즐겨찾기</a>
+			<a href="/_greenart_HumanCloud/HumanCloud/user/Signin">로그인</a>
 		</nav>
 	</div>
 	<div>
