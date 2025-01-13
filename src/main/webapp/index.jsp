@@ -34,13 +34,13 @@
 			<c:when test="${ login != null }">
 				<div>
 					환영합니다. ${ login.getName() } 님
-					<a href="/_greenart_HumanCloud/HumanCloud/user/MyPage">마이페이지</a>
-					<a href="/_greenart_HumanCloud/HumanCloud/user/Signout">로그아웃</a>
+					<a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage">마이페이지</a>
+					<a href="${pageContext.request.contextPath}/HumanCloud/user/Signout">로그아웃</a>
 				</div>
 			</c:when>
 			<c:otherwise>
 				<div>
-					<a href="/_greenart_HumanCloud/HumanCloud/user/Signin">로그인</a>
+					<a href="${pageContext.request.contextPath}/HumanCloud/user/Signin">로그인</a>
 				</div>
 			</c:otherwise>
 			</c:choose>
