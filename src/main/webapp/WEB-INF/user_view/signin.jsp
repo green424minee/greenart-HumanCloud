@@ -15,7 +15,7 @@
 			</ul>
 		</header>
 		<div>
-			<form method="post">
+			<form id="sign-form" method="post">
 				<input type="text" name="userName" required="required">
 				<input type="password" name="password" required="required">
 				<c:if test="${ message != null }">
