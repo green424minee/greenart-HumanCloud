@@ -12,7 +12,7 @@
 <body>
 	<header>
 		<ul>
-			<li><a href="/_greenart_HumanCloud">HumanCloud</a></li>
+			<li><a href="${pageContext.request.contextPath}">HumanCloud</a></li>
 			<li>
 				<div class="search">
 					<form action="">
@@ -33,7 +33,7 @@
 			<c:choose>
 			<c:when test="${ login != null }">
 				<div>
-					환영합니다. ${ login } 님
+					환영합니다. ${ login.getName() } 님
 					<a href="/_greenart_HumanCloud/HumanCloud/user/MyPage">마이페이지</a>
 					<a href="/_greenart_HumanCloud/HumanCloud/user/Signout">로그아웃</a>
 				</div>

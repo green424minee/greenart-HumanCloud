@@ -17,6 +17,5 @@ public class User {
 	private String phone;
 	private String email;
 	private String address;
-	private String type;
 	private Resume resume;
 }
