@@ -5,10 +5,9 @@
 
 ---
 ```
-고길동 gogil@email.com
-둘리 dooli@email.com
-도우너 dd@email.com
-마이콜 mi@email.com
+정현의 dlw0603@naver.com
+이동욱
+한혜진
 ```
 ---
 
