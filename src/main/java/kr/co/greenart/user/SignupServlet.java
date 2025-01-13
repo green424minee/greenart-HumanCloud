@@ -20,14 +20,14 @@ public class SignupServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		UserService service = UserService.getInstance();
 		String name = req.getParameter("name");
-		String userId = req.getParameter("userid");
+		String userName = req.getParameter("userName");
 		String password =  req.getParameter("password");
 		String passwordCheck = req.getParameter("passwordCheck");
 		String phone = req.getParameter("phone");
 		String email = req.getParameter("email");
 		
 		if(ValidatorUtil.isPasswordMatch(password, passwordCheck)) {
-			User user = User.builder().name(name).userId(userId).password(password).phone(phone).email(email).build();
+			User user = User.builder().name(name).userName(userName).password(password).phone(phone).email(email).build();
 			service.insertUser(user);
 			req.getRequestDispatcher("/WEB-INF/user_view/signupResult.jsp").forward(req, resp);
 		} else {

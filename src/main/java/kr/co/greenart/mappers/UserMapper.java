@@ -15,20 +15,20 @@ public interface UserMapper {
 	@Results(id = "userResults"
 			, value = {
 					@Result(column = "id", property = "id", id = true)
-					, @Result(column = "userid", property = "userId")
+					, @Result(column = "username", property = "userName")
 					, @Result(column = "password", property = "password")
 			})
 	List<User> selectAll();
 	
-	@Insert("INSERT INTO user (userid, password, name, phone, email, address) "
-			+ "VALUES (#{userId}, #{password}, #{name}, #{phone}, #{email}, #{address})")
+	@Insert("INSERT INTO user (username, password, name, phone, email, address) "
+			+ "VALUES (#{userName}, #{password}, #{name}, #{phone}, #{email}, #{address})")
 	int insertUser(User user);
 	
-	@Select("SELECT userid, password, name FROM user WHERE userid = #{userId}")
+	@Select("SELECT username, password, name FROM user WHERE username = #{userName}")
 	@Results(value = {
-			@Result(column = "userid", property = "userId")
+			@Result(column = "username", property = "userName")
 			, @Result(column = "password", property = "password")
 			, @Result(column = "name", property = "name")
 	})
-	User selectById(String userId);
+	User selectById(String userName);
 }

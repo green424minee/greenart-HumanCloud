@@ -19,10 +19,10 @@ public class SigninServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		UserService service = UserService.getInstance();
-		String userId = req.getParameter("userid");
+		String userName = req.getParameter("userName");
 		String password = req.getParameter("password");
 		
-		User user = service.selectById(userId);
+		User user = service.selectById(userName);
 		if (user == null) {
 			req.setAttribute("message", "해당 id는 존재하지 않습니다. id를 확인해주세요.");
 			req.getRequestDispatcher("/WEB-INF/user_view/signin.jsp").forward(req, resp);

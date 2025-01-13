@@ -35,11 +35,11 @@ public class UserService {
 		}
 	}
 
-	public User selectById(String userId) {
+	public User selectById(String userName) {
 		try (SqlSession session = DBUtil.getSqlSession()) {
 			UserMapper mapper = session.getMapper(UserMapper.class);
 			
-			User user = mapper.selectById(userId);
+			User user = mapper.selectById(userName);
 			return user;
 		}
 	}

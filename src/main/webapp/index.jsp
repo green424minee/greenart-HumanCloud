@@ -36,7 +36,7 @@
 			<c:when test="${ login != null }">
 				<div>
 					환영합니다. ${ login } 님
-					<a href="">마이페이지</a>
+					<a href="/_greenart_HumanCloud/HumanCloud/user/MyPage">마이페이지</a>
 					<a href="/_greenart_HumanCloud/HumanCloud/user/Signout">로그아웃</a>
 				</div>
 			</c:when>
