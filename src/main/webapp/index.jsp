@@ -32,7 +32,20 @@
 			<a href="">전체 채용 리스트</a>
 			<a href="">이력서 관리</a>
 			<a href="">즐겨찾기</a>
-			<a href="/_greenart_HumanCloud/HumanCloud/user/Signin">로그인</a>
+			<c:choose>
+			<c:when test="${ login != null }">
+				<div>
+					환영합니다. ${ login } 님
+					<a href="/_greenart_HumanCloud/HumanCloud/user/MyPage">마이페이지</a>
+					<a href="/_greenart_HumanCloud/HumanCloud/user/Signout">로그아웃</a>
+				</div>
+			</c:when>
+			<c:otherwise>
+				<div>
+					<a href="/_greenart_HumanCloud/HumanCloud/user/Signin">로그인</a>
+				</div>
+			</c:otherwise>
+			</c:choose>
 		</nav>
 	</div>
 	<div>

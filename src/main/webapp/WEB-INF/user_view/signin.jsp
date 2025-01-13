@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 	<!DOCTYPE html>
 	<html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title>SIGN IN</title>
@@ -10,7 +9,7 @@
 	<body>
 		<div>
 			<form id="sign-form" method="post">
-				<input type="text" name="userid" id="userid">
+				<input type="text" name="userName" id="userName">
 				<input type="password" name="password" id="password">
 				<input type="submit" value="Sign in">
 			</form>
@@ -22,7 +21,7 @@
 	<script>
 		const form = document.getElementById("sign-form");
 
-		const useridInput = document.getElementById("userid");
+		const useridInput = document.getElementById("userName");
 		const passwordInput = document.getElementById("password");
 
 		useridInput.addEventListener("input", validateUserid);
