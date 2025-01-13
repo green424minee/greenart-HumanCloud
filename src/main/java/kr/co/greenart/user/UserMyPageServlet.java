@@ -17,7 +17,7 @@ public class UserMyPageServlet extends HttpServlet {
 		if (session.getAttribute("login") != null) {
 			req.getRequestDispatcher("/WEB-INF/user_view/UserMyPage.jsp").forward(req, resp);
 		} else {
-			req.getRequestDispatcher("/WEB-INF/user_view/signin.jsp").forward(req, resp);
+			resp.sendRedirect("/_greenart_HumanCloud/HumanCloud/user/Signin");
 		}
 	}
 }

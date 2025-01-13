@@ -43,4 +43,15 @@ public class UserService {
 			return user;
 		}
 	}
+
+	public int updateUser(User update) {
+		try(SqlSession session = DBUtil.getSqlSession()) {
+			UserMapper mapper = session.getMapper(UserMapper.class);
+			
+			int row = mapper.updateUser(update);
+			session.commit();
+			
+			return row;
+		}
+	}
 }

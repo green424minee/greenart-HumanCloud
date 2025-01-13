@@ -16,7 +16,9 @@
 		</header>
 		<div>
 			<form id="sign-form" method="post">
+				<label for="userName">아이디</label>
 				<input type="text" name="userName" required="required">
+				<label for="password">비밀번호</label>
 				<input type="password" name="password" required="required">
 				<c:if test="${ message != null }">
 					${ message }
