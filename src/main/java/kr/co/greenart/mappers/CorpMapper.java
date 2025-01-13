@@ -1,10 +1,13 @@
 package kr.co.greenart.mappers;
 
 import java.util.List;
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
+
 import kr.co.green.corp.Corp;
 
 public interface CorpMapper {
@@ -38,6 +41,20 @@ public interface CorpMapper {
             , @Result(column = "corpid", property = "corpid")
             , @Result(column = "password", property = "password")
     })
-    
     Corp selectById(String corpId);
+    
+    @Update("UPDATE company SET " +
+            "name = #{name}, " +
+            "business_reg_no = #{businessRegNo}, " +
+            "description = #{description}, " +
+            "contact = #{contact}, " +
+            "email = #{email}, " +
+            "owner = #{owner}, " +
+            "website = #{website}, " +
+            "emp_count = #{empCount}, " +
+            "sales = #{sales}, " +
+            "address = #{address}, " +
+            "image = #{image} " +
+            "WHERE corpid = #{corpid}")
+    int updateCorp(Corp corp);
 }
