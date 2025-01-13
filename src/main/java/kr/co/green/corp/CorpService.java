@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import kr.co.greenart.mappers.CorpMapper;
 import kr.co.greenart.util.DBUtil;
 
+
 public class CorpService {
     private final static CorpService INSTANCE = new CorpService();
     
@@ -34,4 +35,12 @@ public class CorpService {
             return row;
         }
     }
+
+    public Corp selectById(String corpId) {
+        try (SqlSession session = DBUtil.getSqlSession()) {
+            CorpMapper mapper = session.getMapper(CorpMapper.class);
+            return mapper.selectById(corpId);
+        }
+    }
+
 }
