@@ -10,8 +10,8 @@
 <body>
 	<div>
 		<form method="post">
-			<input type="text" name="userid">
-			<input type="password" name="password">
+			<input type="text" name="userName" required="required">
+			<input type="password" name="password" required="required">
 			<input type="submit" value="Sign in">
 		</form>
 	</div>
