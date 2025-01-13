@@ -22,7 +22,7 @@
 					</form>
 				</div>
 			</li>
-			<li><a href="">기업서비스</a></li>
+			<li><a href="${pageContext.request.contextPath}/HumanCloud/corpindex">기업서비스</a></li>
 		</ul>
 	</header>
 	<div>
