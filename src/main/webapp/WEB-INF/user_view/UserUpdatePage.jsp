@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Human Cloud | MyPage</title>
+	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 	<header>
