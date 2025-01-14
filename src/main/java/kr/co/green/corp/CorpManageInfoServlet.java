@@ -17,7 +17,7 @@ public class CorpManageInfoServlet  extends HttpServlet  {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
-        String olderId = (String) session.getAttribute("corpId");
+        String olderId = ((Corp) session.getAttribute("corp")).getCorpid();
         CorpService service = CorpService.getInstance();
         Corp olderCorp = service.selectById(olderId);
         
@@ -28,7 +28,8 @@ public class CorpManageInfoServlet  extends HttpServlet  {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         CorpService service = CorpService.getInstance();
-		
+		HttpSession session = req.getSession();
+		Corp olderCorp = (Corp) session.getAttribute("corp");
         // form 에서 전달된 parameter 값 모두 꺼내기
         String name = req.getParameter("name");
         System.out.println("확인: " + name);
@@ -76,7 +77,7 @@ public class CorpManageInfoServlet  extends HttpServlet  {
                 .sales(sales)
                 .address(address)
                 .image(image)
-                .corpid("test")
+                .corpid(olderCorp.getCorpid())
                 .build();
         service.updateCorp(corp);
 
