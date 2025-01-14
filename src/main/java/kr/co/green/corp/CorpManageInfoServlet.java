@@ -22,7 +22,7 @@ public class CorpManageInfoServlet  extends HttpServlet  {
         Corp olderCorp = service.selectById(olderId);
         
         req.setAttribute("olderCorp", olderCorp);
-		req.getRequestDispatcher("/WEB-INF/corp_views/CorpManageInfo.jsp").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/corp_views/corpManageInfo.jsp").forward(req, resp);
 	}
 
 	@Override
