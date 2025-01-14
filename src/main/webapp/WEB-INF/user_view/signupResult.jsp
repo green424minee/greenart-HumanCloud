@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>SIGN UP</title>
+	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 	<p>회원가입이 완료되었습니다</p>
