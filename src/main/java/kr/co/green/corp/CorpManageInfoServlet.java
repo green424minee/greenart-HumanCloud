@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 //기업정보관리서블릿입니다.
 
@@ -15,15 +16,20 @@ public class CorpManageInfoServlet  extends HttpServlet  {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		HttpSession session = req.getSession();
+        String olderId = (String) session.getAttribute("corpId");
+        CorpService service = CorpService.getInstance();
+        Corp olderCorp = service.selectById(olderId);
+        
+        req.setAttribute("olderCorp", olderCorp);
 		req.getRequestDispatcher("/WEB-INF/corp_views/CorpManageInfo.jsp").forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// form 에서 전달된 parameter 값 모두 꺼내기
-        CorpService corpService = CorpService.getInstance();
-        
-        
+        CorpService service = CorpService.getInstance();
+		
+        // form 에서 전달된 parameter 값 모두 꺼내기
         String name = req.getParameter("name");
         System.out.println("확인: " + name);
         
@@ -60,19 +66,19 @@ public class CorpManageInfoServlet  extends HttpServlet  {
 		// Corp 객체로 만들기
         Corp corp = Corp.builder()
                 .name(name)
-                .businessRegNo(business_reg_no)
+                .business_reg_no(business_reg_no)
                 .description(description)
                 .contact(contact)
                 .email(email)
                 .owner(owner)
                 .website(website)
-                .empCount(emp_count)
+                .emp_count(emp_count)
                 .sales(sales)
                 .address(address)
                 .image(image)
                 .corpid("test")
                 .build();
-        corpService.updateCorp(corp);
+        service.updateCorp(corp);
 
 		
 		// CorpService에 update 만들기 & CorpMapper에 update 만들기
@@ -80,10 +86,11 @@ public class CorpManageInfoServlet  extends HttpServlet  {
         
         // CorpService 객체 생성 및 update 메서드 호출
 
-        int result = corpService.updateCorp(corp);
-        System.out.println(result);
+        int result = service.updateCorp(corp);
+        if (result > 0) {
+        	System.out.println("infected rows: " + result);
+        }
+
+        resp.sendRedirect(req.getContextPath() + "/HumanCloud/corpindex");
     }
 }
-		// 수정되면 결과화면 보여주기
-
-
