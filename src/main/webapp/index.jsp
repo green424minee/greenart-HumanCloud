@@ -27,7 +27,7 @@
 	</header>
 	<div>
 		<nav class="navigation">
-			<a href="">전체 채용 리스트</a>
+			<a href="${pageContext.request.contextPath}/HumanCloud/RecruitmentList">전체 채용 리스트</a>
 			<a href="">이력서 관리</a>
 			<a href="">즐겨찾기</a>
 			<c:choose>
@@ -48,12 +48,13 @@
 	</div>
 	<div>
 		<ul class="notice">
-			<li>
-			<li>
-			<li>
-			<li>
-			<li>
-			<li>
+			<c:forEach var="recruitment_list" items="${ list }" begin="0" end="8">
+				<li>
+					<a href="${pageContext.request.contextPath}/HumanCloud/Recruitment?recruitment_id=${recruitment_list.id}">${ recruitment_list.name }<br>
+						<strong>${ recruitment_list.title }</strong>
+					</a>
+				</li>
+			</c:forEach>
 		</ul>
 	</div>
 </body>

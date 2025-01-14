@@ -53,4 +53,11 @@ public class CorpService {
         }
     }
 
+	  public Corp selectByIdNo(int id) {
+       try (SqlSession session = DBUtil.getSqlSession()) {
+              CorpMapper mapper = session.getMapper(CorpMapper.class);
+              return mapper.selectByIdNo(id);
+        }
+    }
+
 }

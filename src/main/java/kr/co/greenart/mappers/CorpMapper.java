@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -35,11 +36,17 @@ public interface CorpMapper {
             + "VALUES (#{business_reg_no}, #{corpid}, #{password}, #{name}, #{contact}, #{email}, #{owner}, #{address})")
     int insertCorp(Corp corp);
     
-    @Select("SELECT * FROM company WHERE corpid = #{corpId}")
+    @Select("SELECT id, corpid, password, business_reg_no, name, contact, email, owner, address FROM company WHERE corpid = #{corpId}")
     @Results(id = "corpResult", value = {
             @Result(column = "id", property = "id", id = true)
             , @Result(column = "corpid", property = "corpid")
             , @Result(column = "password", property = "password")
+            , @Result(column = "business_reg_no", property = "businessRegNo")
+            , @Result(column = "name", property = "name")
+            , @Result(column = "contact", property = "contact")
+            , @Result(column = "email", property = "address")
+            , @Result(column = "owner", property = "owner")
+            , @Result(column = "address", property = "address")
     })
     Corp selectById(String corpId);
     
@@ -57,4 +64,8 @@ public interface CorpMapper {
             "image = #{image} " +
             "WHERE corpid = #{corpid}")
     int updateCorp(Corp corp);
+
+    @Select("SELECT id, corpid, password, business_reg_no, name, contact, email, owner, address FROM company WHERE id = #{id}")
+    @ResultMap("corpResult")
+	Corp selectByIdNo(int id);
 }
