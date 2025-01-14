@@ -38,6 +38,11 @@
                 <% if (isLoggedIn) { %>
                     <p>환영합니다, <%= ((Corp)session.getAttribute("corp")).getName() %>님</p>
                     <a href="${pageContext.request.contextPath}/HumanCloud/corp/Logout"><button class="btn-logout">로그아웃</button></a>
+                    
+                    <!-- 추가된 부분: 기업 정보 관리 버튼 -->
+                    <a href="${pageContext.request.contextPath}/HumanCloud/corp/CorpManageInfo"><button class="btn-manage-info">기업 정보 관리</button></a>
+               		<!-- 추가된 부분 끝 -->
+               
                 <% } else { %>
                     <p>환영합니다</p>
                     <p>로그인을 이용해세요</p>

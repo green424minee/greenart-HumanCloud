@@ -43,11 +43,21 @@ public class CorpService {
         }
     }
 
-	public Corp selectByIdNo(int id) {
-		try (SqlSession session = DBUtil.getSqlSession()) {
+    public int updateCorp(Corp corp) {
+        try (SqlSession session = DBUtil.getSqlSession()) {
             CorpMapper mapper = session.getMapper(CorpMapper.class);
-            return mapper.selectByIdNo(id);
+            
+            int row = mapper.updateCorp(corp);
+            session.commit();
+            return row;
         }
-	}
+    }
+
+	  public Corp selectByIdNo(int id) {
+       try (SqlSession session = DBUtil.getSqlSession()) {
+              CorpMapper mapper = session.getMapper(CorpMapper.class);
+              return mapper.selectByIdNo(id);
+        }
+    }
 
 }

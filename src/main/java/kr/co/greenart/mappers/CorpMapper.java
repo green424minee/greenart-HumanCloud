@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import kr.co.green.corp.Corp;
 
@@ -32,7 +33,7 @@ public interface CorpMapper {
     List<Corp> selectAll();
     
     @Insert("INSERT INTO company (business_reg_no, corpid, password, name, contact, email, owner, address) "
-            + "VALUES (#{businessRegNo}, #{corpid}, #{password}, #{name}, #{contact}, #{email}, #{owner}, #{address})")
+            + "VALUES (#{business_reg_no}, #{corpid}, #{password}, #{name}, #{contact}, #{email}, #{owner}, #{address})")
     int insertCorp(Corp corp);
     
     @Select("SELECT id, corpid, password, business_reg_no, name, contact, email, owner, address FROM company WHERE corpid = #{corpId}")
@@ -47,8 +48,22 @@ public interface CorpMapper {
             , @Result(column = "owner", property = "owner")
             , @Result(column = "address", property = "address")
     })
-    
     Corp selectById(String corpId);
+    
+    @Update("UPDATE company SET " +
+            "name = #{name}, " +
+            "business_reg_no = #{business_reg_no}, " +
+            "description = #{description}, " +
+            "contact = #{contact}, " +
+            "email = #{email}, " +
+            "owner = #{owner}, " +
+            "website = #{website}, " +
+            "emp_count = #{emp_count}, " +
+            "sales = #{sales}, " +
+            "address = #{address}, " +
+            "image = #{image} " +
+            "WHERE corpid = #{corpid}")
+    int updateCorp(Corp corp);
 
     @Select("SELECT id, corpid, password, business_reg_no, name, contact, email, owner, address FROM company WHERE id = #{id}")
     @ResultMap("corpResult")
