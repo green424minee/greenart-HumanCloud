@@ -37,6 +37,10 @@ public interface CorpMapper {
             @Result(column = "id", property = "id", id = true)
             , @Result(column = "corpid", property = "corpid")
             , @Result(column = "password", property = "password")
+            , @Result(column = "contact", property = "contact")
+            , @Result(column = "email", property = "address")
+            , @Result(column = "owner", property = "owner")
+            , @Result(column = "address", property = "address")
     })
     
     Corp selectById(String corpId);
