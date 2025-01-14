@@ -43,4 +43,14 @@ public class CorpService {
         }
     }
 
+    public int updateCorp(Corp corp) {
+        try (SqlSession session = DBUtil.getSqlSession()) {
+            CorpMapper mapper = session.getMapper(CorpMapper.class);
+            
+            int row = mapper.updateCorp(corp);
+            session.commit();
+            return row;
+        }
+    }
+
 }
