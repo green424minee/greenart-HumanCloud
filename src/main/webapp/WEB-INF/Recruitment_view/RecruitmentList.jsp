@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Human Cloud | 공고문 리스트</title>
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 	<header>
@@ -78,10 +78,10 @@
 	</div>
 	<div>
 		<!-- 공고문 리스트가 나올구역 -->
-		<ul>
+		<ul class="notice">
 			<c:forEach var="recruitment_list" items="${ list }">
 				<li>
-					<a href="">${ recruitment_list.name }
+					<a href="${pageContext.request.contextPath}/HumanCloud/Recruitment?recruitment_id=${recruitment_list.id}">${ recruitment_list.name }<br>
 						<strong>${ recruitment_list.title }</strong>
 					</a>
 				</li>

@@ -33,4 +33,13 @@ private final static RecruitmentService INSTANCE = new RecruitmentService();
 			return list;
 		}
 	}
+
+	public Recruitment selectById(int recruitmentId) {
+		try(SqlSession session = DBUtil.getSqlSession()) {
+			RecruitmentMapper mapper = session.getMapper(RecruitmentMapper.class);
+			Recruitment recruitment = mapper.selectById(recruitmentId);
+			
+			return recruitment;
+		}
+	}
 }

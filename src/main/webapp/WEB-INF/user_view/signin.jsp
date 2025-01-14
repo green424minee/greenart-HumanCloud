@@ -6,12 +6,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>SIGN IN</title>
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 	</head>
 	<body>
 		<header>
 			<ul>
-				<li><a href="/_greenart_HumanCloud">HumanCloud</a></li>
+				<li><a href="${pageContext.request.contextPath}">HumanCloud</a></li>
 				<li><a href="">기업 홈</a></li>
 			</ul>
 		</header>
@@ -28,7 +28,7 @@
 			</form>
 		</div>
 		<div>
-			<a href="/_greenart_HumanCloud/HumanCloud/user/Signup">회원가입하기</a>
+			<a href="${pageContext.request.contextPath}/HumanCloud/user/Signup">회원가입하기</a>
 		</div>
 	</body>
 	<script>
