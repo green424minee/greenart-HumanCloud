@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>회원 정보 변경</title>
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 	<p>변경이 완료되었습니다</p>

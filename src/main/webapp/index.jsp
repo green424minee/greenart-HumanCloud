@@ -48,12 +48,13 @@
 	</div>
 	<div>
 		<ul class="notice">
-			<li>
-			<li>
-			<li>
-			<li>
-			<li>
-			<li>
+			<c:forEach var="recruitment_list" items="${ list }" begin="0" end="8">
+				<li>
+					<a href="${pageContext.request.contextPath}/HumanCloud/Recruitment?recruitment_id=${recruitment_list.id}">${ recruitment_list.name }<br>
+						<strong>${ recruitment_list.title }</strong>
+					</a>
+				</li>
+			</c:forEach>
 		</ul>
 	</div>
 </body>

@@ -8,12 +8,14 @@ import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
+import ko.co.green.recruitment.Recruitment;
 import ko.co.green.recruitment.RecruitmentList;
 
 public interface RecruitmentMapper {
-	@Select("SELECT name, contact, email, website, address, industry, title, description, end_date, updated_at FROM recruitments")
+	@Select("SELECT id, name, contact, email, website, address, industry, title, description, end_date, updated_at FROM recruitments")
 	@Results(id = "recruitmentList"
 			, value = {
+			@Result(column = "id", property = "id"),
 			@Result(column = "name", property = "name"),
 			@Result(column = "contact", property = "contact"),
 			@Result(column = "email", property = "email"),
@@ -45,7 +47,7 @@ public interface RecruitmentMapper {
 	@ResultMap("recruitmentList")
 	List<RecruitmentList> selectByKeyword(String keyword);
 	
-	@Select("SELECT name, contact, email, website, address, industry, title, description, end_date, updated_at"
+	@Select("SELECT id, name, contact, email, website, address, industry, title, description, end_date, updated_at"
 			+ " FROM human_cloud.recruitments"
 			+ " WHERE address LIKE #{region}"
 			+ " AND ( industry LIKE #{industry} )"
@@ -54,4 +56,18 @@ public interface RecruitmentMapper {
 	List<RecruitmentList> selectByCondition(@Param("region") String region,
 											@Param("industry") String industry,
 											@Param("keyword") String keyword);
+	
+	@Select("SELECT id, company_id, status, title, description, salary, end_date, created_at, updated_at FROM recruitment WHERE id = #{recruitmentId}")
+	@Results(value = {
+			@Result(column = "id", property = "id"),
+			@Result(column = "company_id", property = "company_id"),
+			@Result(column = "status", property = "status"),
+			@Result(column = "title", property = "title"),
+			@Result(column = "description", property = "description"),
+			@Result(column = "salary", property = "salary"),
+			@Result(column = "end_date", property = "end_date"),
+			@Result(column = "updated_at", property = "updated_at"),
+			@Result(column = "created_at", property = "created_at")
+	})
+	Recruitment selectById(int recruitmentId);
 }
