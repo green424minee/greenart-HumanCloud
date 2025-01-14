@@ -29,7 +29,7 @@ public class CorpSigninServlet extends HttpServlet {
             System.out.println("--- 로그인 성공 ---");
             
             HttpSession session = req.getSession();
-            session.setAttribute("corpId", corpId);
+            session.setAttribute("corp", corp);
             
             // 기업 인덱스 페이지로 리다이렉트
             resp.sendRedirect(req.getContextPath() + "/HumanCloud/corpindex");
