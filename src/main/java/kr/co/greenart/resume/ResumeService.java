@@ -55,4 +55,23 @@ public class ResumeService {
 			return mapper.selectLicense(resume_id);
 		}
 	}
+
+	public int createMyResume(int user_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			int row = mapper.createMyResume(user_id);
+			session.commit();
+			
+			return row;
+		}
+	}
+
+	public int getGeneratedKey() {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			return mapper.getGeneratedKey();
+		}
+	}
 }

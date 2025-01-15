@@ -15,7 +15,7 @@
 		</ul>
 	</header>
 	<div>
-		<a href="">이력서 작성하기</a>
+		<a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage/resume/create">이력서 작성하기</a>
 	</div>
 	<div>
 		<ul class="">

@@ -2,6 +2,8 @@ package kr.co.greenart.mappers;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
@@ -14,7 +16,7 @@ import kr.co.greenart.resume.Resume;
 
 public interface ResumeMapper {
 	@Select("SELECT id, user_id, portrait, title, created_at, updated_at"
-			+ " FROM resume WHERE user_id = ${user_id} ")
+			+ " FROM resume WHERE user_id = ${user_id} ORDER BY updated_at DESC")
 	@Results(id = "resumeResult",
 			value = {
 					@Result(column = "id", property = "id", id=true),
@@ -42,4 +44,16 @@ public interface ResumeMapper {
 	@Select("SELECT id, resume_id, value, issued_at"
 			+ " FROM license WHERE resume_id = #{ resume_id }")
 	List<License> selectLicense(int resume_id);
+	
+	@Insert("INSERT INTO resume (user_id) VALUES (#{ user_id })")
+	int createMyResume(int user_id);
+	
+	@Select("SELECT LAST_INSERT_ID()")
+	int getGeneratedKey();
+//	아이디만 이용해서 컬럼을 만들고 생성된 컬럼의 키를 돌려받는 방법
+
+//	@Insert("INSERT INTO resume (user_id) VALUES #{ user_id }")
+//	@Options(keyColumn = "id", useGeneratedKeys = true)
+//	int createResume(Resume resume);
+//	객체를 전달해서 해당 객체에 바로 id를 담는 방법
 }
