@@ -1,4 +1,4 @@
-package kr.co.greenart.user;
+package kr.co.greenart.filter;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 @WebFilter(urlPatterns = {"/HumanCloud/user/MyPage/*"})
-public class UserLoginFilter implements Filter {
+public class UserMyPageFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
