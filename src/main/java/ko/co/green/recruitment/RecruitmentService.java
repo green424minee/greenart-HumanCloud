@@ -7,8 +7,10 @@ import org.apache.ibatis.session.SqlSession;
 import kr.co.greenart.mappers.RecruitmentMapper;
 import kr.co.greenart.util.DBUtil;
 
+
+
 public class RecruitmentService {
-private final static RecruitmentService INSTANCE = new RecruitmentService();
+	private final static RecruitmentService INSTANCE = new RecruitmentService();
     
     private RecruitmentService() {}
     
@@ -42,4 +44,25 @@ private final static RecruitmentService INSTANCE = new RecruitmentService();
 			return recruitment;
 		}
 	}
+	
+	//동욱 공고관리페이지에서 공고 가져오기
+	public List<Recruitment> getRecruitment(int company_id) {
+		try(SqlSession session = DBUtil.getSqlSession()) {
+			RecruitmentMapper mapper = session.getMapper(RecruitmentMapper.class);
+			List<Recruitment> list = mapper.selectByCompanyId(company_id);
+
+			return list;
+		}
+	}
+	
+	
 }
+
+
+
+
+
+
+
+
+

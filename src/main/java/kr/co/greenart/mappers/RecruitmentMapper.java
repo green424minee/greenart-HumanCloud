@@ -70,4 +70,12 @@ public interface RecruitmentMapper {
 			@Result(column = "created_at", property = "created_at")
 	})
 	Recruitment selectById(int recruitmentId);
+
+	
+	//동욱 로그인 사람만 본인 공고문 확인할 수 있
+	@Select("SELECT * FROM human_cloud.recruitment\r\n WHERE company_id = #{companyId}")
+	List<Recruitment> selectByCompanyId(@Param("companyId") int companyId);
 }
+
+
+

@@ -68,7 +68,7 @@ public interface CorpMapper {
             "image = #{image} " +
             "WHERE corpid = #{corpid}")
     int updateCorp(Corp corp);
-
+    
     @Select("SELECT id, corpid, password, business_reg_no, name, contact, email, owner, address FROM company WHERE id = #{id}")
     @ResultMap("corpResult")
 	Corp selectByIdNo(int id);
