@@ -14,10 +14,6 @@ public class UserMyPageServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
-		if (session.getAttribute("login") != null) {
-			req.getRequestDispatcher("/WEB-INF/user_view/UserMyPage.jsp").forward(req, resp);
-		} else {
-			resp.sendRedirect("/_greenart_HumanCloud/HumanCloud/user/Signin");
-		}
+		req.getRequestDispatcher("/WEB-INF/user_view/UserMyPage.jsp").forward(req, resp);
 	}
 }

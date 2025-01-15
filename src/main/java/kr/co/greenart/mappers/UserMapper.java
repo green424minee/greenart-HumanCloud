@@ -24,15 +24,15 @@ public interface UserMapper {
 			+ "VALUES (#{userName}, #{password}, #{name}, #{phone}, #{email}, #{address})")
 	int insertUser(User user);
 	
-	@Select("SELECT username, password, name, phone, email, address FROM user WHERE username = #{userName}")
+	@Select("SELECT id, username, password, name, phone, email, address FROM user WHERE username = #{userName}")
 	@Results(id = "user"
 			, value = {
-			@Result(column = "username", property = "userName")
-			, @Result(column = "password", property = "password")
-			, @Result(column = "name", property = "name")
-			, @Result(column = "phone", property = "phone")
-			, @Result(column = "email", property = "email")
-			, @Result(column = "address", property = "address")
+			@Result(column = "id", property= "id"),
+			@Result(column = "username", property = "userName"),
+			@Result(column = "name", property = "name"),
+			@Result(column = "phone", property = "phone"),
+			@Result(column = "email", property = "email"),
+			@Result(column = "address", property = "address")
 	})
 	User selectById(String userName);
 	
