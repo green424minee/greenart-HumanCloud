@@ -1,6 +1,6 @@
 package kr.co.greenart.resume;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,12 +11,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Resume {
-	// 이력서
+public class License {
 	private int id;
-	private int user_id;
-	private byte[] portrait;
-	private String title;
-	private LocalDateTime created_at;
-	private LocalDateTime updated_at;
+	private int resume_id;
+	private String value;
+	private LocalDate issued_at;
 }

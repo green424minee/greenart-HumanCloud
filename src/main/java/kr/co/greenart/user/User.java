@@ -1,5 +1,6 @@
 package kr.co.greenart.user;
 
+import kr.co.greenart.resume.Resume;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
