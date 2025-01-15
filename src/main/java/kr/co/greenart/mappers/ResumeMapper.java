@@ -7,6 +7,9 @@ import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
+import kr.co.greenart.resume.Education;
+import kr.co.greenart.resume.Experience;
+import kr.co.greenart.resume.License;
 import kr.co.greenart.resume.Resume;
 
 public interface ResumeMapper {
@@ -24,7 +27,16 @@ public interface ResumeMapper {
 	List<Resume> selectMyResumeList(int user_id);
 	
 	@Select("SELECT id, user_id, portrait, title, created_at, updated_at"
-			+ " FROM resume WHERE resume_id = ${resume_id}")
+			+ " FROM resume WHERE id = ${resume_id}")
 	@ResultMap("resumeResult")
 	Resume selectMyResume(int resume_id);
+	
+	@Select("")
+	Education selectEducation(int resume_id);
+	
+	@Select("")
+	Experience selectExperience(int resume_id);
+	
+	@Select("")
+	List<License> selectLicense(int resume_id);
 }
