@@ -31,12 +31,15 @@ public interface ResumeMapper {
 	@ResultMap("resumeResult")
 	Resume selectMyResume(int resume_id);
 	
-	@Select("")
+	@Select("SELECT id, resume_id, school_type, school_name, status, adm_at, grad_at"
+			+ " FROM education WHERE resume_id = #{ resume_id }")
 	Education selectEducation(int resume_id);
 	
-	@Select("")
+	@Select("SELECT id, resume_id, job_title, dept, position, prev_role, status, join_at, leave_or_ongoing_at"
+			+ " FROM experience WHERE resume_id = #{ resume_id }")
 	Experience selectExperience(int resume_id);
 	
-	@Select("")
+	@Select("SELECT id, resume_id, value, issued_at"
+			+ " FROM license WHERE resume_id = #{ resume_id }")
 	List<License> selectLicense(int resume_id);
 }

@@ -33,4 +33,26 @@ public class ResumeService {
 			return resume;
 		}
 	}
+	
+	public Education selectEducation(int resume_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			return mapper.selectEducation(resume_id);
+		}
+	}
+	public Experience selectExperience(int resume_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			return mapper.selectExperience(resume_id);
+		}
+	}
+	public List<License> selectLicense(int resume_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			return mapper.selectLicense(resume_id);
+		}
+	}
 }

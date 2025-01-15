@@ -14,7 +14,21 @@
 		</ul>
 	</header>
 	<div>
-		
+		<h2>${ login.name }님의 이력서</h2>
+		<h1>${ resume.title }</h1>
+	</div>
+	<div class="education">
+		<p>
+		${ education.school_type }
+		<br>
+		${ education.school_name } | ${ education.status }
+		</p>
+	</div>
+	<div class="experience">
+		${ experience }
+	</div>
+	<div class="licenses">
+		${ licenses }
 	</div>
 	<div>
 		<a href="">이력서 수정</a>
