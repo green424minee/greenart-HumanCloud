@@ -42,7 +42,7 @@
 		</nav>
 	</aside>
 	<div>
-		<form method="post">
+		<form action="${pageContext.request.contextPath}/HumanCloud/user/MyPage/resume/my/update?id=${resume.id}" method="post">
 		<div>
 			<input type="hidden" name="resume_id" value="${ resume.id }">
 			<label for="title"></label>
@@ -106,7 +106,7 @@
 				%>
 					<li>
 					<%= license.getValue() %> | <%= license.getIssued_at() %>
-					<a href="">제거하기</a>
+					<a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage/resume/my/deleteLicense?id=${resume.id}&license_id=<%=license.getId()%>">제거하기</a>
 					</li>
 				<%
 					}

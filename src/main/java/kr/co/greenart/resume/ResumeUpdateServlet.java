@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import kr.co.greenart.user.User;
+import kr.co.greenart.util.ValidatorUtil;
 
 @WebServlet("/HumanCloud/user/MyPage/resume/my/update")
 public class ResumeUpdateServlet extends HttpServlet {
@@ -54,11 +55,9 @@ public class ResumeUpdateServlet extends HttpServlet {
 		LocalDate join_at = LocalDate.parse(join);
 		String leave_or_ongoing = req.getParameter("leave_or_ongoing_at");
 		LocalDate leave_or_ongoing_at = LocalDate.parse(leave_or_ongoing);
-		String value = req.getParameter("value");
-		String issued = req.getParameter("issued_at");
-		LocalDate issued_at = LocalDate.parse(issued);
 		
 		service.updateResume(resume_id, title);
+		
 		service.updateEducation(Education.builder()
 								.resume_id(resume_id)
 								.school_type(school_type)
@@ -67,6 +66,7 @@ public class ResumeUpdateServlet extends HttpServlet {
 								.adm_at(adm_at)
 								.grad_at(grad_at)
 								.build());
+		
 		service.updateExperience(Experience.builder()
 								.resume_id(resume_id)
 								.job_title(job_title)
@@ -77,11 +77,17 @@ public class ResumeUpdateServlet extends HttpServlet {
 								.join_at(join_at)
 								.leave_or_ongoing_at(leave_or_ongoing_at)
 								.build());
-		service.insertLicense(License.builder()
-							.resume_id(resume_id)
-							.value(value)
-							.issued_at(issued_at)
-							.build());
+		
+		String value = req.getParameter("value");
+		String issued = req.getParameter("issued_at");
+		if (!ValidatorUtil.isNullOrEmpty(value) && !ValidatorUtil.isNullOrEmpty(issued)) {
+			LocalDate issued_at = LocalDate.parse(issued);
+			service.insertLicense(License.builder()
+					.resume_id(resume_id)
+					.value(value)
+					.issued_at(issued_at)
+					.build());
+		}
 		
 		Resume resume = service.selectMyResume(resume_id);
 		Education education = service.selectEducation(resume_id);

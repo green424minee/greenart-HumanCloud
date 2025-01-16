@@ -57,7 +57,7 @@
 	</div>
 	<div>
 		<a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage/resume/my/update?id=${resume.id}">이력서 수정</a>
-		<a href="">이력서 삭제</a>
+		<a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage/resume/my/delete?id=${resume.id}">이력서 삭제</a>
 	</div>
 </body>
 </html>

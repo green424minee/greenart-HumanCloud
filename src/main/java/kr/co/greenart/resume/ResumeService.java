@@ -84,6 +84,15 @@ public class ResumeService {
 			return row;
 		}
 	}
+	public int createEducation(int resume_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			int row = mapper.createEducation(resume_id);
+			session.commit();
+			return row;
+		}
+	}
 
 	public int updateEducation(Education education) {
 		try (SqlSession session = DBUtil.getSqlSession()) {
@@ -95,6 +104,16 @@ public class ResumeService {
 		}
 	}
 
+	public int createExperience(int resume_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			int row = mapper.createExperience(resume_id);
+			session.commit();
+			return row;
+		}
+	}
+	
 	public int updateExperience(Experience experience) {
 		try (SqlSession session = DBUtil.getSqlSession()) {
 			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
@@ -110,6 +129,56 @@ public class ResumeService {
 			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
 			
 			int row = mapper.insertLicense(license);
+			session.commit();
+			return row;
+		}
+	}
+
+	public int deleteLicense(int license_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			int row = mapper.deleteLicense(license_id);
+			session.commit();
+			return row;
+		}
+	}
+
+	public int deleteLicenses(int resume_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			int row = mapper.deleteLicenses(resume_id);
+			session.commit();
+			return row;
+		}
+	}
+
+	public int deleteExperience(int resume_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			int row = mapper.deleteExperience(resume_id);
+			session.commit();
+			return row;
+		}
+	}
+
+	public int deleteEducation(int resume_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			int row = mapper.deleteEducation(resume_id);
+			session.commit();
+			return row;
+		}
+	}
+
+	public int deleteResume(int resume_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			int row = mapper.deleteResume(resume_id);
 			session.commit();
 			return row;
 		}
