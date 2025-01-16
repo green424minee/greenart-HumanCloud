@@ -20,7 +20,7 @@ public class Recruitment {
 	private String description;
 	// TODO contetn data형으로 추가    // private byte[] content; 
 	private int salary;
-	private LocalDate end_date;
+	private LocalDate end_date; //
 	private LocalDateTime created_at;
 	private LocalDateTime updated_at;
 }

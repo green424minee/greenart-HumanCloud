@@ -5,6 +5,8 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import kr.co.greenart.mappers.RecruitmentMapper;
+import kr.co.greenart.mappers.UserMapper;
+import kr.co.greenart.user.User;
 import kr.co.greenart.util.DBUtil;
 
 
@@ -54,7 +56,16 @@ public class RecruitmentService {
 			return list;
 		}
 	}
-	
+	//동욱 공고 등록하기 
+	public int insertRecruitment(Recruitment recruitment) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			RecruitmentMapper mapper = session.getMapper(RecruitmentMapper.class);
+			
+			int row = mapper.insertRecruitment(recruitment);
+			session.commit();
+			return row;
+		}
+	}
 	
 }
 

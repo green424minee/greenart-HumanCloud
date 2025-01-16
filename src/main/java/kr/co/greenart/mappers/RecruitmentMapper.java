@@ -2,14 +2,17 @@ package kr.co.greenart.mappers;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import ko.co.green.recruitment.Recruitment;
 import ko.co.green.recruitment.RecruitmentList;
+import kr.co.greenart.user.User;
 
 public interface RecruitmentMapper {
 	@Select("SELECT id, name, contact, email, website, address, industry, title, description, end_date, updated_at FROM recruitments")
@@ -75,6 +78,12 @@ public interface RecruitmentMapper {
 	//동욱 로그인 사람만 본인 공고문 확인할 수 있
 	@Select("SELECT * FROM human_cloud.recruitment\r\n WHERE company_id = #{companyId}")
 	List<Recruitment> selectByCompanyId(@Param("companyId") int companyId);
+
+	//동욱 공고등록
+	@Insert("INSERT INTO recruitment (company_id, title, description, salary, end_date) "
+		      + "VALUES (#{company_id}, #{title}, #{description}, #{salary}, #{end_date})") //TODO 얘는 다운케스팅? 그런거 안해줘도되는건가? 형변환인가?
+		int insertRecruitment(Recruitment insert);
+	//업데이트에서 스테이터스 마감으로 바꿀수 잇게 꼭 만들기
 }
 
 
