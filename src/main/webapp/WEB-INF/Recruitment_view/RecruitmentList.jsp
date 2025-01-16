@@ -21,9 +21,9 @@
 			<li><a href="${pageContext.request.contextPath}">HumanCloud</a></li>
 			<li>
 				<div class="search">
-					<form action="">
-						<label for=""></label>
-						<input type="text" name="" id="" maxlength="30">
+					<form action="${pageContext.request.contextPath}/HumanCloud/RecruitmentList" method="post">
+						<label for="keyword"></label>
+						<input type="text" name="keyword" id="keyword" maxlength="30">
 						<input type="submit">
 					</form>
 				</div>

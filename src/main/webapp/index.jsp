@@ -15,9 +15,9 @@
 			<li><a href="${pageContext.request.contextPath}">HumanCloud</a></li>
 			<li>
 				<div class="search">
-					<form action="">
-						<label for=""></label>
-						<input type="text" name="" id="" maxlength="30">
+					<form action="${pageContext.request.contextPath}/HumanCloud/RecruitmentList" method="post">
+						<label for="keyword"></label>
+						<input type="text" name="keyword" id="keyword" maxlength="30">
 						<input type="submit">
 					</form>
 				</div>
@@ -28,7 +28,7 @@
 	<div>
 		<nav class="navigation">
 			<a href="${pageContext.request.contextPath}/HumanCloud/RecruitmentList">전체 채용 리스트</a>
-			<a href="">이력서 관리</a>
+			<a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage/resume">이력서 관리</a>
 			<a href="">즐겨찾기</a>
 			<c:choose>
 			<c:when test="${ login != null }">
