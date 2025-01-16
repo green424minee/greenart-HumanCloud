@@ -3,11 +3,12 @@ package kr.co.greenart.mappers;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import kr.co.greenart.resume.Education;
 import kr.co.greenart.resume.Experience;
@@ -51,6 +52,24 @@ public interface ResumeMapper {
 	@Select("SELECT LAST_INSERT_ID()")
 	int getGeneratedKey();
 //	아이디만 이용해서 컬럼을 만들고 생성된 컬럼의 키를 돌려받는 방법
+	
+	@Update("UPDATE resume SET title = #{title} WHERE id = #{resume_id} ")
+	int updateResume(@Param("resume_id") int resume_id,
+					@Param("title") String title);
+	
+	@Update("UPDATE education"
+			+ " SET school_type = #{school_type}, school_name = #{school_name}, status = #{status}, adm_at = #{adm_at}, grad_at=#{grad_at}"
+			+ " WHERE resume_id = #{resume_id}")
+	int updateEducation(Education education);
+	
+	@Update("UPDATE experience"
+			+ " SET job_title = #{job_title}, dept = #{dept}, position = #{position}, prev_role = #{prev_role}, status = #{status}, join_at = #{join_at}, leave_or_ongoing_at = #{leave_or_ongoing_at}"
+			+ " WHERE resume_id = #{resume_id}")
+	int updateExperience(Experience experience);
+	
+	@Insert("INSERT INTO license (resume_id, value, issued_at)"
+			+ " VALUES (#{resume_id}, #{value}, #{issued_at})")
+	int insertLicense(License license);
 
 //	@Insert("INSERT INTO resume (user_id) VALUES #{ user_id }")
 //	@Options(keyColumn = "id", useGeneratedKeys = true)

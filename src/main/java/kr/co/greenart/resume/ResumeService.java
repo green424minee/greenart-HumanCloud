@@ -74,4 +74,44 @@ public class ResumeService {
 			return mapper.getGeneratedKey();
 		}
 	}
+
+	public int updateResume(int resume_id, String title) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			int row = mapper.updateResume(resume_id, title);
+			session.commit();
+			return row;
+		}
+	}
+
+	public int updateEducation(Education education) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			int row = mapper.updateEducation(education);
+			session.commit();
+			return row;
+		}
+	}
+
+	public int updateExperience(Experience experience) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			int row = mapper.updateExperience(experience);
+			session.commit();
+			return row;
+		}
+	}
+
+	public int insertLicense(License license) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			int row = mapper.insertLicense(license);
+			session.commit();
+			return row;
+		}
+	}
 }
