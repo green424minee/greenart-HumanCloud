@@ -17,7 +17,7 @@
 		<h2>${ corp.name }</h2><br>
 		<h1>${ recruitment.title }</h1>
 		<button>즐겨찾기</button>
-		<a href="">지원하기</a>
+		<a href="${pageContext.request.contextPath}/HumanCloud/Recruitment/apply?recruitment_id=${recruitment.id}">지원하기</a>
 	</div>
 	<div>
 		<small>등록일 : ${ recruitment.created_at }
