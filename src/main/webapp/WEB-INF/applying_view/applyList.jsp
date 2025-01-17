@@ -48,6 +48,7 @@
 			<%= applyList.get(i).getEnd_date() %> | 
 			<%= list.get(i).getStatus() %> | 
 			<%= list.get(i).getApplied_at() %>
+			<a href="${pageContext.request.contextPath}/HumanCloud/Recruitment/apply/cancel?apply_id=<%=list.get(i).getId()%>">지원취소</a>
 			</li>
 		<%			
 			}

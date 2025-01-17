@@ -2,6 +2,7 @@ package kr.co.greenart.mappers;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
@@ -27,5 +28,7 @@ public interface ApplyingMapper {
 			+ " VALUES (#{recruitment_id}, #{user_id}, #{resume_id})")
 	int insertApplyment(Apply apply);
 	
+	@Delete("DELETE FROM apply WHERE id = #{id}")
+	int deleteApply(int id);
 	
 }

@@ -35,4 +35,15 @@ public class ApplyingService {
 			return list;
 		}
 	}
+
+	public int deleteApply(int id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ApplyingMapper mapper = session.getMapper(ApplyingMapper.class);
+			
+			int row = mapper.deleteApply(id);
+			session.commit();
+			
+			return row;
+		}
+	}
 }
