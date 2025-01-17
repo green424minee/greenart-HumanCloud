@@ -52,10 +52,13 @@ public class ManageJobsCreateServlet extends HttpServlet {
         // 폼 데이터를 Recruitment 객체에 설정
         Recruitment recruitment = new Recruitment();
         recruitment.setCompany_id(corp.getId()); //로그인한사람
-        
         recruitment.setTitle(req.getParameter("recruitmentTitle"));
-        recruitment.setDescription(req.getParameter("recruitmentStatus")); // JSP의 name 속성과 맞춤
+        recruitment.setDescription(req.getParameter("recruitmentdescription")); // JSP의 name 속성과 맞춤
         recruitment.setSalary(Integer.parseInt(req.getParameter("recruitmentSalary")));
+        //학력 추가해줘야함
+        String school_type = req.getParameter("school_type");
+        recruitment.setSchool_type(school_type);
+        
         //로컬데이트는 데이터 타입이 다르니까 변환해서 스트링에 넣어서 적어줘야함 0000-00-00 
         String recruitmentEndDate = req.getParameter("recruitmentEnd_date");
         LocalDate recruitmentEnd_date = LocalDate.parse(recruitmentEndDate);
