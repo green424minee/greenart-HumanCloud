@@ -20,7 +20,7 @@
 				<li><a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage">마이페이지</a></li>
 				<li><a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage/resume">이력서</a></li>
 				<li><a href="">즐겨찾기</a></li>
-				<li><a href="">지원내역</a></li>
+				<li><a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage/apply">지원내역</a></li>
 				<li><a href="">받은제안</a></li>
 			</ul>
 		</nav>
