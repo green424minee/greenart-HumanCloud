@@ -33,6 +33,14 @@
 			<c:forEach var="myResume" items="${list}">
 				<li>
 					<a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage/resume/my?id=${myResume.id}">${myResume.title}</a>
+					<c:choose>
+					<c:when test="${ myResume.id == crrentUser.default_resume_id }">
+						대표 이력서
+					</c:when>
+					<c:otherwise>
+					<a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage/resume/my/setDefault?id=${myResume.id}">대표로 설정하기</a>
+					</c:otherwise>
+					</c:choose>
 				</li>
 			</c:forEach>
 		</ul>
