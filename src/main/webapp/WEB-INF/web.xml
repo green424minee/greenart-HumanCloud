@@ -18,6 +18,11 @@
   	<filter-name>UserMyPageFilter</filter-name>
   	<url-pattern>/HumanCloud/user/MyPage/*</url-pattern>
   </filter-mapping>
+  <filter-mapping>
+  	<filter-name>UserMyPageFilter</filter-name>
+  	<url-pattern>/HumanCloud/Recruitment/apply/*</url-pattern>
+  </filter-mapping>
+  
   <filter>
   	<filter-name>UserResumeFilter</filter-name>
   	<filter-class>kr.co.greenart.filter.UserResumeFilter</filter-class>
