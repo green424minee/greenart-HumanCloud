@@ -1,5 +1,7 @@
 package kr.co.greenart.resume;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -183,6 +185,66 @@ public class ResumeService {
 			return row;
 		}
 	}
+    // 경력 기간 계산
+	public String calculateExperiencePeriod(Experience experience) {
+	    if (experience == null) {
+	        return "신입";
+	    }
+	    
+	    LocalDate joinAt = experience.getJoin_at();
+	    LocalDate leaveAt = experience.getLeave_or_ongoing_at();
+	    
+	    if (joinAt == null || leaveAt == null) {
+	        return "신입";
+	    }
+	    
+	    Period period = Period.between(joinAt, leaveAt);
+	    int years = period.getYears();
+	    int months = period.getMonths();
+	    
+	    // 1년 미만인 경우
+	    if (years == 0) {
+	        if (months == 0) {
+	            return "신입";
+	        }
+	        return months + "개월";
+	    }
+	    // 1년 이상인 경우
+	    else if (months == 0) {
+	        return years + "년";
+	    }
+	    // 년과 월이 모두 있는 경우
+	    else {
+	        return years + "년 " + months + "개월";
+	    }
+	}
+
+
+    // 최종학력 판단
+    public String getFinalEducation(Education education) {
+        if (education == null) {
+            return "학력 정보 없음";
+        }
+        
+        String schoolType = education.getSchool_type();
+        if (schoolType == null) {
+            return "학력 정보 없음";
+        }
+        
+        switch (schoolType.toLowerCase()) {
+            case "elem":
+                return "초졸";
+            case "mid":
+                return "중졸";
+            case "high":
+                return "고졸";
+            case "univ":
+                return "대졸";
+            default:
+                return "학력 정보 없음";
+        }
+    }
+}
 
 	public List<RepResume> selectByCondition(String school_type, String industry, String keyword) {
 		try (SqlSession session = DBUtil.getSqlSession()) {

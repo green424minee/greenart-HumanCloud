@@ -46,8 +46,11 @@
                         <p>연봉: ${recru.salary}</p>
                     </div>
 					<div class="notice-buttons">
-					    <button>지원자 확인</button>
-					    
+<div>						
+    <a href="${pageContext.request.contextPath}/HumanCloud/corp/ManageApplicantsServlet?id=${recru.id}">
+        <button class="btn-manage-info">지원자 확인</button>
+    </a> 	
+</div>					    
 						<c:if test="${recru.status eq 'active'}">
 					        <form action="ManageJobsServlet" method="post" style="display:inline;">
 					            <button type="submit" name="recruitmentId" value="${recru.id}">마감</button>

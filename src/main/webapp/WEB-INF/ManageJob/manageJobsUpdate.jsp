@@ -34,6 +34,16 @@
             </select>
         </div>
         <div>
+		    <label for="experience">경력</label>
+		    <select id="experience" name="experience" required>
+		        <option value="신입" ${job.experience eq '신입' ? 'selected' : ''}>신입</option>
+		        <option value="1년 미만" ${job.experience eq '1년 미만' ? 'selected' : ''}>1년 미만</option>
+		        <option value="1-3년" ${job.experience eq '1-3년' ? 'selected' : ''}>1-3년</option>
+		        <option value="3-5년" ${job.experience eq '3-5년' ? 'selected' : ''}>3-5년</option>
+		        <option value="5년 이상" ${job.experience eq '5년 이상' ? 'selected' : ''}>5년 이상</option>
+		    </select>
+		</div>
+        <div>
             <label for="salary">연봉</label>
             <input type="number" id="salary" name="recruitmentSalary" value="${job.salary}" required>
         </div>

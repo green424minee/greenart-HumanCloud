@@ -43,10 +43,13 @@
                 <h2>공고관리</h2>
                 <a href="${pageContext.request.contextPath}/HumanCloud/corp/ManageJobsServlet"><button class="btn-manage-info">공고 등록 / 관리</button></a>
             </div>
-            <div class="applicant-manage">
-                <h2>지원자 관리</h2>
-                <a href="${pageContext.request.contextPath}/HumanCloud/corp/ManageApplicantsServlet"><button class="btn-manage-info">지원자 조회 / 관리</button></a>
-            </div>
+            
+<div class="applicant-manage">
+    <h2>지원자 관리</h2>
+    <a href="${pageContext.request.contextPath}/HumanCloud/corp/ManageApplicantsServlet">
+        <button class="btn-manage-info">지원자 조회 / 관리</button>
+    </a> 	
+</div>
             <div class="company-manage">
                 <h2>기업관리</h2>
                 <a href="${pageContext.request.contextPath}/HumanCloud/corp/CorpManageInfo"><button class="btn-manage-info">기업 정보 관리</button></a>
