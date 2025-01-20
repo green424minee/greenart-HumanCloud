@@ -32,7 +32,7 @@ public class SigninServlet extends HttpServlet {
 		} else {
 			HttpSession session = req.getSession();
 			session.setAttribute("login", user);
-			resp.sendRedirect("/_greenart_HumanCloud");
+			resp.sendRedirect(req.getContextPath());
 		}
 	}
 }
