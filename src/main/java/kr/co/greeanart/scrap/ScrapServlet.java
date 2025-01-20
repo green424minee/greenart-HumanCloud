@@ -1,7 +1,6 @@
 package kr.co.greeanart.scrap;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -20,9 +19,8 @@ public class ScrapServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 		ScrapService service = ScrapService.getInstance();
 		List<Scrap> scrapList = null;
-//		User user = (User) session.getAttribute("login");
-//		int userId = user.getId();
-		int userId = 1; // 임시
+		User user = (User) session.getAttribute("login");
+		int userId = user.getId();
 
 		// init
 		scrapList = service.selectScraps(userId);
@@ -42,6 +40,7 @@ public class ScrapServlet extends HttpServlet {
 					
 				case "end_date_asc":
 					sortEndDateAsc(scrapList);
+					break;
 				}
 				
 				req.setAttribute("selectedSortType", sortType);
@@ -57,23 +56,29 @@ public class ScrapServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
 		ScrapService service = ScrapService.getInstance();
-//		User user = (User) session.getAttribute("login");
-//		int userId = user.getId();
-		int userId = 1; // 임시
+		User user = (User) session.getAttribute("login");
+		int userId = user.getId();
 		
 		// 요청종류 구분
 		switch(req.getParameter("formType")) {
-		case "scrap":
+		case "scrap": // from recruitment.jsp
 			int recrId = Integer.parseInt(req.getParameter("recrId"));
-			System.out.println(recrId);
-			
-			int rows = service.insertScrap(userId, recrId);
-			if(rows > 0) {
-				System.out.println("infected rows: " + rows);
+			int irow = service.insertScrap(userId, recrId);
+			if(irow > 0) {
+				System.out.println("infected row: " + irow);
 			}
+			break;
+			
+		case "delete": // from scrapList.jsp
+			int id = Integer.parseInt(req.getParameter("id"));
+			int drow = service.deleteScrap(id);
+			if(drow > 0) {
+				System.out.println("infected row: " + drow);
+			}
+			break;
 		}
 		
-		req.getRequestDispatcher("/WEB-INF/user_view/scrapList.jsp").forward(req, resp);
+		resp.sendRedirect(req.getHeader("referer"));
 	}
 
 	private void sortScrapAtAsc(List<Scrap> scrapList) {

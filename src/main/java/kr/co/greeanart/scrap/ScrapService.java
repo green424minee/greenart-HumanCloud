@@ -41,12 +41,25 @@ public class ScrapService {
 	public int insertScrap(int userId, int recrId) {
 		try(SqlSession session = DBUtil.getSqlSession()) {
 			ScrapMapper mapper = session.getMapper(ScrapMapper.class);
-			int rows = mapper.insertScrap(userId, recrId);
-			if(rows > 0) {
-				session.commit();
-			}
-			
-			return rows;
+			int row = mapper.insertScrap(userId, recrId);
+			session.commit();
+			return row;
+		}
+	}
+	
+	public int deleteScrap(int id) {
+		try(SqlSession session = DBUtil.getSqlSession()) {
+			ScrapMapper mapper = session.getMapper(ScrapMapper.class);
+			int row = mapper.deleteScrap(id);
+			session.commit();
+			return row;
+		}
+	}
+	
+	public boolean isScrapped(int userId, int rescId) {
+		try(SqlSession session = DBUtil.getSqlSession()) {
+			ScrapMapper mapper = session.getMapper(ScrapMapper.class);
+			return (mapper.isScrapped(userId, rescId) ? true : false);
 		}
 	}
 }

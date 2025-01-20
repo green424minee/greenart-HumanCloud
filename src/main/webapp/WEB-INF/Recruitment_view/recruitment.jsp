@@ -16,7 +16,11 @@
 	<div>
 		<h2>${ corp.name }</h2><br>
 		<h1>${ recruitment.title }</h1>
-		<button>즐겨찾기</button>
+		<form method="post" action="${pageContext.request.contextPath}/HumanCloud/user/scrapList">
+			<input type="hidden" name="formType" value="scrap">
+			<input type="hidden" name="recrId" value="${ recruitment.id }">
+			<button ${isScrapped ? "disabled='disabled'" : ''}>즐겨찾기</button>
+		</form>
 		<a href="">지원하기</a>
 	</div>
 	<div>

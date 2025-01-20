@@ -34,9 +34,15 @@
 		
 		<div class="block">
 			<c:forEach var="scrap" items="${ scrapList }">
+				<div>
+					<form method="post" action="${pageContext.request.contextPath}/HumanCloud/user/scrapList">
+						<input type="hidden" name="formType" value="delete">
+						<input type="hidden" name="id" value="${ scrap.id }">
+						<button>삭제</button>
+					</form>
+				</div>
 				<div class="block">
-					${ scrap.corp_name } ${ scrap.recr_title } ${ scrap.end_date }
-					${ scrap.scrap_at }
+					<strong>${ scrap.corp_name } | ${ scrap.recr_title } | ${ scrap.end_date } | ${ scrap.scrap_at }</strong>
 				</div>
 				<hr>
 			</c:forEach>

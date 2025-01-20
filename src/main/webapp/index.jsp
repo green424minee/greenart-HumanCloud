@@ -29,7 +29,7 @@
 		<nav class="navigation">
 			<a href="${pageContext.request.contextPath}/HumanCloud/RecruitmentList">전체 채용 리스트</a>
 			<a href="">이력서 관리</a>
-			<a href="">즐겨찾기</a>
+			<a href="${pageContext.request.contextPath}/HumanCloud/user/scrapList">즐겨찾기</a>
 			<c:choose>
 			<c:when test="${ login != null }">
 				<div>
