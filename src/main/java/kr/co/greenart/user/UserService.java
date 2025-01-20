@@ -56,4 +56,12 @@ public class UserService {
 			return row;
 		}
 	}
+
+	public List<ReceivedOffer> selectReceivedOffer(int user_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			UserMapper mapper = session.getMapper(UserMapper.class);
+			
+			return mapper.selectReceivedOffer(user_id);
+		}
+	}
 }

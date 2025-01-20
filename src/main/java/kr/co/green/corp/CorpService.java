@@ -60,4 +60,12 @@ public class CorpService {
         }
     }
 
+	public int insertOffer(int user_id, int company_id) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			CorpMapper mapper = session.getMapper(CorpMapper.class);
+			int row = mapper.insertOffer(user_id, company_id);
+			session.commit();
+			return row;
+		}
+	}
 }

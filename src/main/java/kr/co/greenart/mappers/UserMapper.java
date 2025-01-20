@@ -1,5 +1,7 @@
 package kr.co.greenart.mappers;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
@@ -7,6 +9,7 @@ import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
+import kr.co.greenart.user.ReceivedOffer;
 import kr.co.greenart.user.User;
 
 public interface UserMapper {
@@ -34,4 +37,7 @@ public interface UserMapper {
 	@Update("UPDATE user SET default_resume_id = #{default_resume_id} WHERE username = #{userName}")
 	int updateDefaultResume(@Param("userName") String userName,
 							@Param("default_resume_id") int resume_id);
+	
+	@Select("SELECT user_id, company_id, status, offered_at FROM job_offer WHERE user_id = #{user_id}")
+	List<ReceivedOffer> selectReceivedOffer(int user_id);
 }
