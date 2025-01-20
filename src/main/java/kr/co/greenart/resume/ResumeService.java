@@ -244,7 +244,7 @@ public class ResumeService {
                 return "학력 정보 없음";
         }
     }
-}
+
 
 	public List<RepResume> selectByCondition(String school_type, String industry, String keyword) {
 		try (SqlSession session = DBUtil.getSqlSession()) {

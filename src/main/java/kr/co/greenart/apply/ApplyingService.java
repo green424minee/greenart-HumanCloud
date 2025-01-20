@@ -74,7 +74,7 @@ public class ApplyingService {
 
 
     
-}
+
 
 	public List<Apply> selectAll(int user_id) {
 		try (SqlSession session = DBUtil.getSqlSession()) {

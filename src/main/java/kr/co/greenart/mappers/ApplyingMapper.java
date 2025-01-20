@@ -13,12 +13,11 @@ import org.apache.ibatis.annotations.Update;
 import kr.co.greenart.apply.Apply;
 
 public interface ApplyingMapper {
-    @Select("SELECT * FROM apply")
-    List<Apply> selectAll();
+
     
-    @Insert("INSERT INTO apply (recruitment_id, user_id, resume_id)"
-            + " VALUES (#{recruitment_id}, #{user_id}, #{resume_id})")
-    int insertApplyment(Apply apply);
+	@Insert("INSERT INTO apply (recruitment_id, user_id, resume_id)"
+			+ " VALUES (#{recruitment_id}, #{user_id}, #{resume_id})")
+	int insertApplyment(Apply apply);
     
     // 공고별 지원자 조회
     @Select("SELECT * FROM apply WHERE recruitment_id = #{recruitment_id}")
@@ -57,9 +56,7 @@ public interface ApplyingMapper {
 			})
 	List<Apply> selectAll(int user_id);
 	
-	@Insert("INSERT INTO apply (recruitment_id, user_id, resume_id)"
-			+ " VALUES (#{recruitment_id}, #{user_id}, #{resume_id})")
-	int insertApplyment(Apply apply);
+
 	
 	@Delete("DELETE FROM apply WHERE id = #{id}")
 	int deleteApply(int id);
