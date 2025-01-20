@@ -3,6 +3,7 @@ package kr.co.greenart.mappers;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
@@ -72,4 +73,8 @@ public interface CorpMapper {
     @Select("SELECT id, corpid, password, business_reg_no, name, contact, email, owner, address FROM company WHERE id = #{id}")
     @ResultMap("corpResult")
 	Corp selectByIdNo(int id);
+    
+    @Insert("INSERT INTO job_offer (user_id, company_id) VALUES (#{user_id}, #{company_id})")
+	int insertOffer(@Param("user_id") int user_id,
+					@Param("company_id") int company_id);
 }

@@ -55,7 +55,7 @@
         	<li>
         		<strong>${repResume.user_name}</strong>
         		${repResume.dept}
-        		<a href="">제안하기</a>
+        		<a href="${pageContext.request.contextPath}/HumanCloud/corp/SearchApplicantsServlet/JobOffer?id=${repResume.user_id}">제안하기</a>
         		<br>
         		${repResume.school_type} (${repResume.school_status})
         	</li>

@@ -72,7 +72,7 @@
 	<div class="section">
 	<div class="fixed-grid has-3-cols">
 		<ul class="grid">
-			<c:forEach var="recruitment_list" items="${ list }" begin="0" end="8">
+			<c:forEach var="recruitment_list" items="${ list }" begin="0" end="11">
 				<li class="cell">
 					<a href="${pageContext.request.contextPath}/HumanCloud/Recruitment?recruitment_id=${recruitment_list.id}">${ recruitment_list.name }<br>
 						<strong>${ recruitment_list.title }</strong>
