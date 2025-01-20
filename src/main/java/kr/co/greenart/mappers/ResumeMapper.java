@@ -14,6 +14,7 @@ import org.apache.ibatis.annotations.Update;
 import kr.co.greenart.resume.Education;
 import kr.co.greenart.resume.Experience;
 import kr.co.greenart.resume.License;
+import kr.co.greenart.resume.RepResume;
 import kr.co.greenart.resume.Resume;
 
 public interface ResumeMapper {
@@ -98,5 +99,28 @@ public interface ResumeMapper {
 	@Delete("DELETE FROM resume WHERE id = #{resume_id}")
 	int deleteResume(int resume_id);
 	
-	
+	@Select("SELECT resume_id, user_id, resume_title, user_name, user_email FROM representation_resume;")
+	List<Resume> selectRepresentation();
+
+	@Select("SELECT resume_id, user_id, resume_title, user_name, user_email, school_type, school_status, industry, dept, position, company_status"
+			+ " FROM human_cloud.representation_resume"
+			+ "	WHERE school_type = #{school_type}"
+			+ " AND industry = #{industry}"
+			+ " AND (dept LIKE #{keyword} OR position LIKE #{keyword})")
+	@Results(value = {
+			@Result(column = "resume_id", property = "resume_id"),
+			@Result(column = "user_id", property = "user_id"),
+			@Result(column = "resume_title", property = "resume_title"),
+			@Result(column = "user_name", property = "user_name"),
+			@Result(column = "user_email", property = "user_email"),
+			@Result(column = "school_type", property = "school_type"),
+			@Result(column = "school_status", property = "school_status"),
+			@Result(column = "industry", property = "industry"),
+			@Result(column = "dept", property = "dept"),
+			@Result(column = "position", property = "position"),
+			@Result(column = "company_status", property="company_status")
+	})
+	List<RepResume> selectByCondition(@Param("school_type") String school_type,
+									@Param("industry") String industry,
+									@Param("keyword") String keyword);
 }

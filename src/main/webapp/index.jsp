@@ -1,16 +1,17 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Human Cloud | HOME</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 </head>
 <body>
-	<header>
+<div class="container is-max-desktop">
+	<header class="section">
 		<ul>
 			<li><a href="${pageContext.request.contextPath}">HumanCloud</a></li>
 			<li>
@@ -46,10 +47,10 @@
 			</c:choose>
 		</nav>
 	</div>
-	<div>
-		<ul class="notice">
+	<div class="fixed-gird has-3-cols">
+		<ul class="grid">
 			<c:forEach var="recruitment_list" items="${ list }" begin="0" end="8">
-				<li>
+				<li class="cell">
 					<a href="${pageContext.request.contextPath}/HumanCloud/Recruitment?recruitment_id=${recruitment_list.id}">${ recruitment_list.name }<br>
 						<strong>${ recruitment_list.title }</strong>
 					</a>
@@ -57,5 +58,6 @@
 			</c:forEach>
 		</ul>
 	</div>
+</div>
 </body>
 </html>
