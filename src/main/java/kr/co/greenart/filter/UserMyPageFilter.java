@@ -22,7 +22,7 @@ public class UserMyPageFilter implements Filter {
 		HttpSession session = req.getSession(false);
 		
 		if (session == null || session.getAttribute("login") == null) {
-			resp.sendRedirect("/_greenart_HumanCloud/HumanCloud/user/Signin");
+			resp.sendRedirect(req.getContextPath() + "/HumanCloud/user/Signin");
 		} else {
 			chain.doFilter(request, response);
 		}
