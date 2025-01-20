@@ -55,9 +55,13 @@ public class ManageJobsCreateServlet extends HttpServlet {
         recruitment.setTitle(req.getParameter("recruitmentTitle"));
         recruitment.setDescription(req.getParameter("recruitmentdescription")); // JSP의 name 속성과 맞춤
         recruitment.setSalary(Integer.parseInt(req.getParameter("recruitmentSalary")));
-        //학력 추가해줘야함
+        
+        //학력
         String school_type = req.getParameter("school_type");
         recruitment.setSchool_type(school_type);
+        //경력
+        String experience = req.getParameter("experience");
+        recruitment.setExperience(experience);
         
         //로컬데이트는 데이터 타입이 다르니까 변환해서 스트링에 넣어서 적어줘야함 0000-00-00 
         String recruitmentEndDate = req.getParameter("recruitmentEnd_date");

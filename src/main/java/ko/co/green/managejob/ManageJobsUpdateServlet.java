@@ -43,6 +43,8 @@ public class ManageJobsUpdateServlet extends HttpServlet {
         recruitment.setDescription(req.getParameter("recruitmentdescription"));
         recruitment.setSalary(Integer.parseInt(req.getParameter("recruitmentSalary")));
         recruitment.setSchool_type(req.getParameter("school_type"));
+        //경력
+        recruitment.setExperience(req.getParameter("experience"));
         
         String endDate = req.getParameter("recruitmentEnd_date");
         LocalDate end_date = LocalDate.parse(endDate);

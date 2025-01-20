@@ -29,6 +29,17 @@
 			        <option value="univ">대학교 졸업</option>
 			    </select>
 			</div>
+			<div>
+			    <label for="experience">경력</label>
+			    <select id="experience" name="experience" required>
+			        <option value="" disabled selected>선택하세요</option>
+			        <option value="신입">신입</option>
+			        <option value="1년 미만">1년 미만</option>
+			        <option value="1-3년">1-3년</option>
+			        <option value="3-5년">3-5년</option>
+			        <option value="5년 이상">5년 이상</option>
+			    </select>
+			</div>
 		<div>
 		    <label for="salary">연봉</label>
 		    <input type="number" id="salary" name="recruitmentSalary" value="${ job.salary }" required>

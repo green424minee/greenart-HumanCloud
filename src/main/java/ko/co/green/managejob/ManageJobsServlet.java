@@ -25,6 +25,7 @@ public class ManageJobsServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	    HttpSession session = req.getSession();
 	    Corp corp = (Corp) session.getAttribute("corp");
+
 	    
 	    String status = req.getParameter("status");
 	    if (status == null) {

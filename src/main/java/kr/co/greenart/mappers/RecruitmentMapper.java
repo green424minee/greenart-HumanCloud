@@ -100,7 +100,7 @@ public interface RecruitmentMapper {
 	@Delete("DELETE FROM recruitment WHERE id = #{recruitmentId} AND company_id = #{companyId}")
 	int deleteRecruitment(@Param("recruitmentId") int recruitmentId, @Param("companyId") int companyId);
 
-	
+
 
 	
 }

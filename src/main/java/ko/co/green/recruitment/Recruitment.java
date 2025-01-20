@@ -25,6 +25,8 @@ public class Recruitment {
 	
 	//동욱 학력 추가..
     private String school_type;
+    //동욱 경력 필드 추가
+    private String experience; 
 	private int salary;
 	private LocalDate end_date; //
 	private LocalDateTime created_at;
