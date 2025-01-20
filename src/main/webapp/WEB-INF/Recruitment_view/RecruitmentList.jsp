@@ -1,6 +1,13 @@
+<%@page import="java.util.List"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%
+	List<String> region = List.of("서울", "경기", "인천", "부산", "대구", "광주", "대전", "울산", "세종", "강원", "경남", "경북", "전남", "전북", "충남", "충북", "제주");
+	List<String> industry = List.of("strategy", "marketing", "accounting", "hrd", "secretary", "it", "design", "trade", "md", "delivery", "service", "production", "erection", "medical", "research", "education", "media", "finance", "welfare");
+	List<String> industryKor = List.of("기획/전략", "마케팅/홍보/조사", "회계/세무/재무", "인사/노무/HRD", "총무/법무/사무", "IT개발/데이터", "디자인", "영업/판매/무역", "상품기획/MD", "운전/운송/배송", "서비스", "생산", "건설/건축", "의료", "연구/R&D", "교육", "미디어/문화/스포츠", "금융/보험", "공공/복지");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,9 +21,9 @@
 			<li><a href="${pageContext.request.contextPath}">HumanCloud</a></li>
 			<li>
 				<div class="search">
-					<form action="">
-						<label for=""></label>
-						<input type="text" name="" id="" maxlength="30">
+					<form action="${pageContext.request.contextPath}/HumanCloud/RecruitmentList" method="post">
+						<label for="keyword"></label>
+						<input type="text" name="keyword" id="keyword" maxlength="30">
 						<input type="submit">
 					</form>
 				</div>
@@ -29,50 +36,31 @@
 		<form method="post">
 		<label for="region">지역</label>
 		<select id="region" name="region">
-		<%-- 리팩토링을 통해서 선택한 옵션이 유지되도록 할 것 --%>
 			<option value="">전국</option>
-			<option value="서울">서울</option>
-			<option value="경기">경기</option>
-			<option value="인천">인천</option>
-			<option value="부산">부산</option>
-			<option value="대구">대구</option>
-			<option value="광주">광주</option>
-			<option value="대전">대전</option>
-			<option value="울산">울산</option>
-			<option value="세종">세종</option>
-			<option value="강원">강원</option>
-			<option value="경남">경남</option>
-			<option value="경북">경북</option>
-			<option value="전남">전남</option>
-			<option value="전북">전북</option>
-			<option value="충남">충남</option>
-			<option value="충북">충북</option>
-			<option value="제주">제주</option>
+			<%
+				for (String reg : region) {
+			%>
+				<option value="<%= reg %>" <%= reg.equals(request.getParameter("region")) ? "selected" : "" %>>
+					<%= reg %>
+				</option>
+			<%
+				}
+			%>
 		</select>
 		<label for="industry">직종</label>
 		<select id="industry" name="industry">
-			<option value="">전체</option>
-			<option value="strategy">기획/전략</option>
-			<option value="marketing">마케팅/홍보/조사</option>
-			<option value="accounting">회계/세무/재무</option>
-			<option value="hrd">인사/노무/HRD</option>
-			<option value="secretary">총무/법무/사무</option>
-			<option value="it">IT개발/데이터</option>
-			<option value="design">디자인</option>
-			<option value="trade">영업/판매/무역</option>
-			<option value="md">상품기획/MD</option>
-			<option value="delivery">운전/운송/배송</option>
-			<option value="service">서비스</option>
-			<option value="production">생산</option>
-			<option value="erection">건설/건축</option>
-			<option value="medical">의료</option>
-			<option value="research">연구/R&D</option>
-			<option value="education">교육</option>
-			<option value="media">미디어/문화/스포츠</option>
-			<option value="finance">금융/보험</option>
-			<option value="welfare">공공/복지</option>
+			<option value="">전국</option>
+			<%
+				for (int i = 0; i < industry.size(); i++) {
+			%>
+				<option value="<%= industry.get(i) %>" <%= industry.get(i).equals(request.getParameter("industry")) ? "selected" : "" %>>
+					<%= industryKor.get(i) %>
+				</option>						
+			<%
+				}
+			%>
 		</select>
-		<input type="text" name="keyword" placeholder="키워드검색">
+		<input type="text" name="keyword" placeholder="키워드검색" value="<%= request.getParameter("keyword") == null ? "" : request.getParameter("keyword") %>">
 		<input type="submit" value="검색">
 		</form>
 	</div>

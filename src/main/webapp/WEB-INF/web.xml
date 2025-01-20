@@ -4,4 +4,31 @@
   <welcome-file-list>
     <welcome-file>/index</welcome-file>
   </welcome-file-list>
+  
+  <error-page>
+  	<error-code>400</error-code>
+  	<location>/error400.jsp</location>
+  </error-page>
+  
+  <filter>
+  	<filter-name>UserMyPageFilter</filter-name>
+  	<filter-class>kr.co.greenart.filter.UserMyPageFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>UserMyPageFilter</filter-name>
+  	<url-pattern>/HumanCloud/user/MyPage/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>UserMyPageFilter</filter-name>
+  	<url-pattern>/HumanCloud/Recruitment/apply/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>UserResumeFilter</filter-name>
+  	<filter-class>kr.co.greenart.filter.UserResumeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>UserResumeFilter</filter-name>
+  	<url-pattern>/HumanCloud/user/MyPage/resume/my/*</url-pattern>
+  </filter-mapping>
 </web-app>

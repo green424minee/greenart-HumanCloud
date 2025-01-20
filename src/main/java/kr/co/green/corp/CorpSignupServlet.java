@@ -42,7 +42,7 @@ public class CorpSignupServlet extends HttpServlet {
         
         if(ValidatorUtil.isPasswordMatch(password, passwordCheck)) {
             Corp corp = Corp.builder()
-                .businessRegNo(businessRegNo)
+                .business_reg_no(businessRegNo)
                 .name(name)
                 .corpid(corpId)
                 .password(password)
