@@ -42,11 +42,9 @@
 					</form>
 				</div>
 				<div class="block">
-					<form>
 					<a href="${pageContext.request.contextPath}/HumanCloud/Recruitment?recruitment_id=${scrap.recruitment_id}" >
 						<strong>${ scrap.corp_name } | ${ scrap.recr_title } | ${ scrap.end_date } | ${ scrap.scrap_at }</strong>
 					</a>
-					</form>
 				</div>
 				<hr>
 			</c:forEach>
