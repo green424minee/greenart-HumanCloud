@@ -11,43 +11,66 @@
 </head>
 <body>
 <div class="container is-max-desktop">
-	<header class="section">
-		<ul>
-			<li><a href="${pageContext.request.contextPath}">HumanCloud</a></li>
-			<li>
-				<div class="search">
-					<form action="${pageContext.request.contextPath}/HumanCloud/RecruitmentList" method="post">
-						<label for="keyword"></label>
-						<input type="text" name="keyword" id="keyword" maxlength="30">
-						<input type="submit">
-					</form>
+	<header class="section navbar">
+		<div class="navbar-start">
+			<div class="navbar-item">
+			<a href="${pageContext.request.contextPath}">HumanCloud</a>
+			</div>
+		</div>
+		<div class="navbar-item">
+			<form action="${pageContext.request.contextPath}/HumanCloud/RecruitmentList" method="post">
+			<div class="field has-addons">
+				<div class="control">
+					<input class="input" type="text" name="keyword" placeholder="키워드로 검색하기">
 				</div>
-			</li>
-			<li><a href="${pageContext.request.contextPath}/HumanCloud/corpindex">기업서비스</a></li>
-		</ul>
+				<div class="control">
+					<input type="submit" class="button is-info">
+				</div>
+			</div>
+			</form>
+		</div>
+		<div class="navbar-end">
+		<div class="navbar-item">
+			<a href="${pageContext.request.contextPath}/HumanCloud/corpindex">기업서비스</a>
+		</div>
+		</div>
 	</header>
 	<div>
-		<nav class="navigation">
-			<a href="${pageContext.request.contextPath}/HumanCloud/RecruitmentList">전체 채용 리스트</a>
-			<a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage/resume">이력서 관리</a>
-			<a href="">즐겨찾기</a>
+		<nav class="navbar">
+		
+		<div class="navbar-menu">
+			<div class="navbar-start">
+			<div class="navbar-item">
+				<a href="${pageContext.request.contextPath}/HumanCloud/RecruitmentList">전체 채용 리스트</a>
+			</div>
+			<div class="navbar-item">
+				<a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage/resume">이력서 관리</a>
+			</div>
+			<div class="navbar-item">
+				<a href="">즐겨찾기</a>
+			</div>
+			</div>
+		</div>
+			<div class="navbar-end">
 			<c:choose>
 			<c:when test="${ login != null }">
-				<div>
+				<div class="navbar-item">
 					환영합니다. ${ login.getName() } 님
 					<a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage">마이페이지</a>
 					<a href="${pageContext.request.contextPath}/HumanCloud/user/Signout">로그아웃</a>
 				</div>
 			</c:when>
 			<c:otherwise>
-				<div>
+				<div class="navbar-item">
 					<a href="${pageContext.request.contextPath}/HumanCloud/user/Signin">로그인</a>
 				</div>
 			</c:otherwise>
 			</c:choose>
+			</div>
 		</nav>
 	</div>
-	<div class="fixed-gird has-3-cols">
+	<div class="section">
+	<div class="fixed-grid has-3-cols">
 		<ul class="grid">
 			<c:forEach var="recruitment_list" items="${ list }" begin="0" end="8">
 				<li class="cell">
@@ -57,6 +80,7 @@
 				</li>
 			</c:forEach>
 		</ul>
+	</div>
 	</div>
 </div>
 </body>

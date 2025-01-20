@@ -104,8 +104,8 @@ public interface ResumeMapper {
 
 	@Select("SELECT resume_id, user_id, resume_title, user_name, user_email, school_type, school_status, industry, dept, position, company_status"
 			+ " FROM human_cloud.representation_resume"
-			+ "	WHERE school_type = #{school_type}"
-			+ " AND industry = #{industry}"
+			+ "	WHERE school_type LIKE #{school_type}"
+			+ " AND industry LIKE #{industry}"
 			+ " AND (dept LIKE #{keyword} OR position LIKE #{keyword})")
 	@Results(value = {
 			@Result(column = "resume_id", property = "resume_id"),

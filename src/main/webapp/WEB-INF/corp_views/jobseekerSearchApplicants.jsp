@@ -55,9 +55,9 @@
         	<li>
         		<strong>${repResume.user_name}</strong>
         		${repResume.dept}
-        		<br>
-        		${repResume.school_type} (${repResume.shcool_stauts})
         		<a href="">제안하기</a>
+        		<br>
+        		${repResume.school_type} (${repResume.school_status})
         	</li>
         	</c:forEach>
         </ul>
