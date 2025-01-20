@@ -7,7 +7,7 @@
 ---
 ```
 정현의 dlw0603@naver.com
-이동욱
+이동욱 ben896@nate.com
 한혜진 rose33hj@naver.com
 ```
 ---
