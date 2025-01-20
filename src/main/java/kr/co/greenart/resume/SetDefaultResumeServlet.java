@@ -1,7 +1,6 @@
 package kr.co.greenart.resume;
 
 import java.io.IOException;
-import java.util.List;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -12,21 +11,19 @@ import jakarta.servlet.http.HttpSession;
 import kr.co.greenart.user.User;
 import kr.co.greenart.user.UserService;
 
-@WebServlet("/HumanCloud/user/MyPage/resume")
-public class ResumeListServlet extends HttpServlet {
+@WebServlet("/HumanCloud/user/MyPage/resume/my/setDefault")
+public class SetDefaultResumeServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		ResumeService service = ResumeService.getInstance();
-		UserService userService = UserService.getInstance();
-		
+		UserService service = UserService.getInstance();
 		HttpSession session = req.getSession();
-		User user = (User) session.getAttribute("login");
-		int user_id = user.getId();
-		List<Resume> myList = service.selectMyResumeList(user_id);
-		User currentUser = userService.selectById(user.getUserName());
 		
-		req.setAttribute("crrentUser", currentUser);
-		req.setAttribute("list", myList);
-		req.getRequestDispatcher("/WEB-INF/user_view/resume/resumeList.jsp").forward(req, resp);
+		User user = (User) session.getAttribute("login");
+		String userName = user.getUserName();
+		String id = req.getParameter("id");
+		int resume_id = Integer.parseInt(id);
+		
+		service.updateDefaultResume(userName, resume_id);
+		resp.sendRedirect(req.getContextPath() + "/HumanCloud/user/MyPage/resume");
 	}
 }

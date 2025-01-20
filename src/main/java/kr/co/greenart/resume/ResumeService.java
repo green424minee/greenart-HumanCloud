@@ -245,3 +245,13 @@ public class ResumeService {
         }
     }
 }
+
+	public List<RepResume> selectByCondition(String school_type, String industry, String keyword) {
+		try (SqlSession session = DBUtil.getSqlSession()) {
+			ResumeMapper mapper = session.getMapper(ResumeMapper.class);
+			
+			List<RepResume> list = mapper.selectByCondition(school_type, industry, keyword);
+			return list;
+		}
+	}
+}

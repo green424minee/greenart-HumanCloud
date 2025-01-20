@@ -16,15 +16,6 @@ public class UserService {
 		return INSTANCE;
 	}
 	
-	public List<User> selectAll() {
-		try (SqlSession session = DBUtil.getSqlSession()) {
-			UserMapper mapper = session.getMapper(UserMapper.class);
-			
-			List<User> list = mapper.selectAll();
-			return list;
-		}
-	}
-	
 	public int insertUser(User user) {
 		try (SqlSession session = DBUtil.getSqlSession()) {
 			UserMapper mapper = session.getMapper(UserMapper.class);
@@ -49,6 +40,17 @@ public class UserService {
 			UserMapper mapper = session.getMapper(UserMapper.class);
 			
 			int row = mapper.updateUser(update);
+			session.commit();
+			
+			return row;
+		}
+	}
+
+	public int updateDefaultResume(String userName, int resume_id) {
+		try(SqlSession session = DBUtil.getSqlSession()) {
+			UserMapper mapper = session.getMapper(UserMapper.class);
+			
+			int row = mapper.updateDefaultResume(userName, resume_id);
 			session.commit();
 			
 			return row;

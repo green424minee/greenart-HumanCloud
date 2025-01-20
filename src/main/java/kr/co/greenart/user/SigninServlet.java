@@ -30,10 +30,9 @@ public class SigninServlet extends HttpServlet {
 			req.setAttribute("message", "비밀번호가 일치하지 않습니다. 비밀번호를 확인해주세요.");
 			req.getRequestDispatcher("/WEB-INF/user_view/signin.jsp").forward(req, resp);
 		} else {
-			// TODO login success
 			HttpSession session = req.getSession();
 			session.setAttribute("login", user);
-			resp.sendRedirect("/_greenart_HumanCloud");
+			resp.sendRedirect(req.getContextPath());
 		}
 	}
 }

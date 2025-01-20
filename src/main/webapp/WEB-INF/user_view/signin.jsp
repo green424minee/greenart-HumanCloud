@@ -12,7 +12,7 @@
 		<header>
 			<ul>
 				<li><a href="${pageContext.request.contextPath}">HumanCloud</a></li>
-				<li><a href="">기업 홈</a></li>
+				<li><a href="${pageContext.request.contextPath}/HumanCloud/corpindex">기업 홈</a></li>
 			</ul>
 		</header>
 		<div>
