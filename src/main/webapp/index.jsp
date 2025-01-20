@@ -37,7 +37,6 @@
 	</header>
 	<div>
 		<nav class="navbar">
-		
 		<div class="navbar-menu">
 			<div class="navbar-start">
 			<div class="navbar-item">
@@ -47,7 +46,7 @@
 				<a href="${pageContext.request.contextPath}/HumanCloud/user/MyPage/resume">이력서 관리</a>
 			</div>
 			<div class="navbar-item">
-				<a href="">즐겨찾기</a>
+				<a href="${pageContext.request.contextPath}/HumanCloud/user/scrapList">즐겨찾기</a>
 			</div>
 			</div>
 		</div>
