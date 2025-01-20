@@ -18,12 +18,11 @@ public class ScrapServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession();
 		ScrapService service = ScrapService.getInstance();
-		List<Scrap> scrapList = null;
 		User user = (User) session.getAttribute("login");
 		int userId = user.getId();
-
+		
 		// init
-		scrapList = service.selectScraps(userId);
+		List<Scrap> scrapList = service.selectScraps(userId);
 		
 		String formType = req.getParameter("formType");
 		if(formType != null) {
@@ -63,18 +62,12 @@ public class ScrapServlet extends HttpServlet {
 		switch(req.getParameter("formType")) {
 		case "scrap": // from recruitment.jsp
 			int recrId = Integer.parseInt(req.getParameter("recrId"));
-			int irow = service.insertScrap(userId, recrId);
-			if(irow > 0) {
-				System.out.println("infected row: " + irow);
-			}
+			service.insertScrap(userId, recrId);
 			break;
 			
 		case "delete": // from scrapList.jsp
 			int id = Integer.parseInt(req.getParameter("id"));
-			int drow = service.deleteScrap(id);
-			if(drow > 0) {
-				System.out.println("infected row: " + drow);
-			}
+			service.deleteScrap(id);
 			break;
 		}
 		
