@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @Builder
 public class User {
 	private int id;
+	private int default_resume_id;
 	private String userName;
 	private String password;
 	private String name;
 	private String phone;
 	private String email;
 	private String address;
-	private Resume resume;
 }

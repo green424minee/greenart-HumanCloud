@@ -15,7 +15,6 @@ import kr.co.greenart.resume.Resume;
 import kr.co.greenart.resume.ResumeService;
 import kr.co.greenart.user.User;
 
-@WebFilter(filterName = "UserResumeFilter", urlPatterns = "/HumaCloud/user/MyPage/resume/my/*")
 public class UserResumeFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
