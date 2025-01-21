@@ -11,9 +11,7 @@
 <body>
 <div class="container is-max-desktop">
 	<header class="section">
-		<ul>
-			<li><a href="${pageContext.request.contextPath}">HumanCloud</a></li>
-		</ul>
+		<a href="${pageContext.request.contextPath}">HumanCloud</a>
 	</header>
 	<div class="columns">
 		<div class="column is-one-fifth">
