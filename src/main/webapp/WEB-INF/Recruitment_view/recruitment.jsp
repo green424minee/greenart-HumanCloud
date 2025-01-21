@@ -8,27 +8,29 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
-	<header>
-		<ul>
-			<li><a href="${pageContext.request.contextPath}">HumanCloud</a></li>
-		</ul>
+<div class="container is-max-desktop">
+	<header class="section">
+		<a href="${pageContext.request.contextPath}">HumanCloud</a>
 	</header>
-	<div>
-		<h2>${ corp.name }</h2><br>
-		<h1>${ recruitment.title }</h1>
-		<form method="post" action="${pageContext.request.contextPath}/HumanCloud/user/scrapList">
-			<input type="hidden" name="formType" value="scrap">
-			<input type="hidden" name="recrId" value="${ recruitment.id }">
-			<button ${isScrapped ? "disabled='disabled'" : ''}>즐겨찾기</button>
-		</form>
-		<a href="${pageContext.request.contextPath}/HumanCloud/Recruitment/apply?recruitment_id=${recruitment.id}">지원하기</a>
+	<div class="section">
+		<div>
+			<h2>${ corp.name }</h2><br>
+			<h1>${ recruitment.title }</h1>
+			<form method="post" action="${pageContext.request.contextPath}/HumanCloud/user/scrapList">
+				<input type="hidden" name="formType" value="scrap">
+				<input type="hidden" name="recrId" value="${ recruitment.id }">
+				<button ${isScrapped ? "disabled='disabled'" : ''}>즐겨찾기</button>
+			</form>
+			<a href="${pageContext.request.contextPath}/HumanCloud/Recruitment/apply?recruitment_id=${recruitment.id}">지원하기</a>
+		</div>
+		<div class="block">
+			<small>등록일 : ${ recruitment.created_at }
+			<br>수정일 : ${ recruitment.updated_at }</small>
+		</div>
+		<div class="box">
+			${ recruitment.description }
+		</div>
 	</div>
-	<div>
-		<small>등록일 : ${ recruitment.created_at }
-		<br>수정일 : ${ recruitment.updated_at }</small>
-	</div>
-	<div>
-		${ recruitment.description }
-	</div>
+</div>
 </body>
 </html>
