@@ -1,0 +1,29 @@
+site_name: 자바&Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정 - 11회차
+theme:
+  name: material
+  language: ko
+  features:
+    # - navigation.sections
+    # - navigation.expand
+    # - navigation.indexes
+
+nav:
+  # - Home: index.html
+  # - 프로젝트(학생자료): 프로젝트(학생자료)
+  # - Mini Project-01: Mini%20Project-01%20휴먼%20클라우드%20이력%20관리%20플랫폼%20웹개발
+  # - 프로젝트(교사자료): 프로젝트(교사자료)
+  # - Mini Project-01: 교사/Mini%20Project-01/Mini%20Project-01
+
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+  - print-site:
+      add_to_navigation: true
+      add_table_of_contents: false
+      enumerate_headings: false
+      enumerate_figures: false
+      add_cover_page: false
