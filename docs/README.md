@@ -20,4 +20,8 @@
 - [PPT 발표자료](문서/3_팀_프로젝트_결과보고서.pptx)
 - [프로젝트 성찰지 목록](문서/4_프로젝트_성찰지_목록.md)
 
+https://github.com/user-attachments/assets/05bac0da-f8bf-4dac-bd55-a577830ab04f
+
+https://github.com/user-attachments/assets/e28097bf-ea79-4fa7-a1b4-9536b13f1a8f
+
 ---
