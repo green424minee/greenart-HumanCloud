@@ -1,0 +1,2962 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Print Site - 자바&Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정 - 11회차</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.d7758b05.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();
+        })
+        </script>
+        </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정 - 11회차" class="md-header__button md-logo" aria-label="자바&Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정 - 11회차" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            자바&Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정 - 11회차
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Print Site
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정 - 11회차" class="md-nav__button md-logo" aria-label="자바&Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정 - 11회차" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    자바&Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정 - 11회차
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    프로젝트 개요
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EA%B3%BC%EC%A0%9C_%EC%88%98%ED%96%89_%EA%B3%84%ED%9A%8D%EC%84%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 프로젝트 과제 수행 계획서
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8_%EB%AA%A9%EB%A1%9D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    공통과제
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%84%B1%EC%B0%B0%EC%A7%80_%EB%AA%A9%EB%A1%9D/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 프로젝트 성찰지 목록
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 하브루타 노트
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            2 하브루타 노트
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8%28DB%2C%EC%8A%A4%ED%81%AC%EB%9E%A9%29_%ED%95%9C%ED%98%9C%EC%A7%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트(한혜진/데이터베이스,스크랩)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8_%EC%9D%B4%EB%8F%99%EC%9A%B1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트(이동욱/기업페이지)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EA%B0%9C%EB%B0%9C%20%ED%99%98%EA%B2%BD%20%EA%B5%AC%EC%B6%95%2C%20%ED%98%91%EC%97%85%20%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%20%EA%B0%9C%EB%B0%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    프로그램 개발 환경 구축, 협업 프로세스 개발
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B81_%EC%9D%B4%EB%8F%99%EC%9A%B1_%EA%B8%B0%EC%97%85%EB%A9%94%EC%9D%B8%ED%8E%98%EC%9D%B4%EC%A7%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트 (이동욱/기업 메인페이지 기본 구조 설계)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B82_%EC%9D%B4%EB%8F%99%EC%9A%B1_%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%EB%A7%81%ED%81%AC%EA%B5%AC%ED%98%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트(이동욱/주요 기능 링크 구현)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B83_%EC%9D%B4%EB%8F%99%EC%9A%B1_%EC%82%AC%EC%9A%A9%EC%9E%90%EC%9D%B8%EC%A6%9D%EA%B8%B0%EB%8A%A5%EA%B5%AC%ED%98%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트(이동욱/사용자 인증 기능 구현)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B84_%EC%9D%B4%EB%8F%99%EC%9A%B1_%EA%B6%8C%ED%95%9C%EA%B4%80%EB%A6%AC%EA%B5%AC%ED%98%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트(이동욱/권한 관리 구현)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B85_%EC%9D%B4%EB%8F%99%EC%9A%B1_%EA%B3%B5%EA%B3%A0%EA%B4%80%EB%A6%AC%ED%8E%98%EC%9D%B4%EC%A7%80%EA%B5%AC%ED%98%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트(이동욱/공고 관리 페이지 구현)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B86_%EC%9D%B4%EB%8F%99%EC%9A%B1_%EC%A7%80%EC%9B%90%EC%9E%90%EA%B4%80%EB%A6%AC%ED%8E%98%EC%9D%B4%EC%A7%80%EA%B5%AC%ED%98%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트(이동욱/지원자 관리 페이지 구현)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8_%EC%9D%B4%EB%8F%99%EC%9A%B1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트(이동욱/기업페이지)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80%EB%85%B8%ED%8A%B8%28%EC%A0%95%ED%98%84%EC%9D%98%2C%EA%B3%B5%EA%B3%A0%ED%8E%98%EC%9D%B4%EC%A7%80%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트(정현의,공고페이지)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80%EB%85%B8%ED%8A%B8%28%EC%A0%95%ED%98%84%EC%9D%98%2C%EB%A7%88%EC%9D%B4%ED%8E%98%EC%9D%B4%EC%A7%80%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트(정현의,마이페이지)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80%EB%85%B8%ED%8A%B8%28%EC%A0%95%ED%98%84%EC%9D%98%2C%EC%9D%B4%EB%A0%A5%EC%84%9C%ED%8E%98%EC%9D%B4%EC%A7%80%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트(정현의,이력서페이지)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80_%EB%85%B8%ED%8A%B8/%ED%95%98%EB%B8%8C%EB%A3%A8%ED%83%80%EB%85%B8%ED%8A%B8%28%EC%A0%95%ED%98%84%EC%9D%98%2C%EC%A7%80%EC%9B%90%ED%8E%98%EC%9D%B4%EC%A7%80%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    하브루타노트(정현의,지원페이지)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    4 프로젝트 성찰지
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            4 프로젝트 성찰지
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%84%B1%EC%B0%B0%EC%A7%80/4_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%84%B1%EC%B0%B0%EC%A7%80_%EC%9D%B4%EB%8F%99%EC%9A%B1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    프로젝트 성찰지(이동욱)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%84%B1%EC%B0%B0%EC%A7%80/4_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%84%B1%EC%B0%B0%EC%A7%80_%EC%A0%95%ED%98%84%EC%9D%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    프로젝트 성찰지(정현의)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%84%B1%EC%B0%B0%EC%A7%80/4_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%84%B1%EC%B0%B0%EC%A7%80_%ED%95%9C%ED%98%9C%EC%A7%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    프로젝트 성찰지(한혜진)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Print Site
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Print Site
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#" class="md-nav__link">
+    <span class="md-ellipsis">
+      프로젝트 개요
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ea%b3%bc%ec%a0%9c_%ec%88%98%ed%96%89_%ea%b3%84%ed%9a%8d%ec%84%9c" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 프로젝트 과제 수행 계획서
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%eb%aa%a9%eb%a1%9d" class="md-nav__link">
+    <span class="md-ellipsis">
+      공통과제
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%eb%aa%a9%eb%a1%9d" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 프로젝트 성찰지 목록
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-하브루타-노트" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 하브루타 노트
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 하브루타 노트">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8%28db%2c%ec%8a%a4%ed%81%ac%eb%9e%a9%29_%ed%95%9c%ed%98%9c%ec%a7%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(한혜진/데이터베이스,스크랩)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/기업페이지)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8%20%ea%b0%9c%eb%b0%9c%20%ed%99%98%ea%b2%bd%20%ea%b5%ac%ec%b6%95%2c%20%ed%98%91%ec%97%85%20%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4%20%ea%b0%9c%eb%b0%9c" class="md-nav__link">
+    <span class="md-ellipsis">
+      프로그램 개발 환경 구축, 협업 프로세스 개발
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b81_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b8%b0%ec%97%85%eb%a9%94%ec%9d%b8%ed%8e%98%ec%9d%b4%ec%a7%80" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트 (이동욱/기업 메인페이지 기본 구조 설계)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b82_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a3%bc%ec%9a%94%ea%b8%b0%eb%8a%a5%eb%a7%81%ed%81%ac%ea%b5%ac%ed%98%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/주요 기능 링크 구현)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b83_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%82%ac%ec%9a%a9%ec%9e%90%ec%9d%b8%ec%a6%9d%ea%b8%b0%eb%8a%a5%ea%b5%ac%ed%98%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/사용자 인증 기능 구현)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b84_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b6%8c%ed%95%9c%ea%b4%80%eb%a6%ac%ea%b5%ac%ed%98%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/권한 관리 구현)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b85_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b3%b5%ea%b3%a0%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/공고 관리 페이지 구현)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b86_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a7%80%ec%9b%90%ec%9e%90%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/지원자 관리 페이지 구현)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/기업페이지)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ea%b3%b5%ea%b3%a0%ed%8e%98%ec%9d%b4%ec%a7%80%29" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(정현의,공고페이지)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%eb%a7%88%ec%9d%b4%ed%8e%98%ec%9d%b4%ec%a7%80%29" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(정현의,마이페이지)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%9d%b4%eb%a0%a5%ec%84%9c%ed%8e%98%ec%9d%b4%ec%a7%80%29" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(정현의,이력서페이지)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%a7%80%ec%9b%90%ed%8e%98%ec%9d%b4%ec%a7%80%29" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(정현의,지원페이지)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-프로젝트-성찰지" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 프로젝트 성찰지
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 프로젝트 성찰지">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1" class="md-nav__link">
+    <span class="md-ellipsis">
+      프로젝트 성찰지(이동욱)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98" class="md-nav__link">
+    <span class="md-ellipsis">
+      프로젝트 성찰지(정현의)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      프로젝트 성찰지(한혜진)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#" class="md-nav__link">
+    <span class="md-ellipsis">
+      프로젝트 개요
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ea%b3%bc%ec%a0%9c_%ec%88%98%ed%96%89_%ea%b3%84%ed%9a%8d%ec%84%9c" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 프로젝트 과제 수행 계획서
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%eb%aa%a9%eb%a1%9d" class="md-nav__link">
+    <span class="md-ellipsis">
+      공통과제
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%eb%aa%a9%eb%a1%9d" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 프로젝트 성찰지 목록
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-하브루타-노트" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 하브루타 노트
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 하브루타 노트">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8%28db%2c%ec%8a%a4%ed%81%ac%eb%9e%a9%29_%ed%95%9c%ed%98%9c%ec%a7%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(한혜진/데이터베이스,스크랩)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/기업페이지)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8%20%ea%b0%9c%eb%b0%9c%20%ed%99%98%ea%b2%bd%20%ea%b5%ac%ec%b6%95%2c%20%ed%98%91%ec%97%85%20%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4%20%ea%b0%9c%eb%b0%9c" class="md-nav__link">
+    <span class="md-ellipsis">
+      프로그램 개발 환경 구축, 협업 프로세스 개발
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b81_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b8%b0%ec%97%85%eb%a9%94%ec%9d%b8%ed%8e%98%ec%9d%b4%ec%a7%80" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트 (이동욱/기업 메인페이지 기본 구조 설계)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b82_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a3%bc%ec%9a%94%ea%b8%b0%eb%8a%a5%eb%a7%81%ed%81%ac%ea%b5%ac%ed%98%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/주요 기능 링크 구현)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b83_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%82%ac%ec%9a%a9%ec%9e%90%ec%9d%b8%ec%a6%9d%ea%b8%b0%eb%8a%a5%ea%b5%ac%ed%98%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/사용자 인증 기능 구현)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b84_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b6%8c%ed%95%9c%ea%b4%80%eb%a6%ac%ea%b5%ac%ed%98%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/권한 관리 구현)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b85_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b3%b5%ea%b3%a0%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/공고 관리 페이지 구현)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b86_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a7%80%ec%9b%90%ec%9e%90%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/지원자 관리 페이지 구현)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(이동욱/기업페이지)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ea%b3%b5%ea%b3%a0%ed%8e%98%ec%9d%b4%ec%a7%80%29" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(정현의,공고페이지)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%eb%a7%88%ec%9d%b4%ed%8e%98%ec%9d%b4%ec%a7%80%29" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(정현의,마이페이지)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%9d%b4%eb%a0%a5%ec%84%9c%ed%8e%98%ec%9d%b4%ec%a7%80%29" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(정현의,이력서페이지)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%a7%80%ec%9b%90%ed%8e%98%ec%9d%b4%ec%a7%80%29" class="md-nav__link">
+    <span class="md-ellipsis">
+      하브루타노트(정현의,지원페이지)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-프로젝트-성찰지" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 프로젝트 성찰지
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 프로젝트 성찰지">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1" class="md-nav__link">
+    <span class="md-ellipsis">
+      프로젝트 성찰지(이동욱)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98" class="md-nav__link">
+    <span class="md-ellipsis">
+      프로젝트 성찰지(정현의)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84" class="md-nav__link">
+    <span class="md-ellipsis">
+      프로젝트 성찰지(한혜진)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div id="print-site-page" class=""><section class="print-page" id="index"><h1 id="index-_1">프로젝트 개요</h1>
+<p>프로젝트 주제 : 사용자 맞춤형 이력 관리 및 직무 연계 서비스를 제공하여 구직자와 기업 간 효율적인 매칭을 지원하는 웹 기반 플랫폼</p>
+<p>배경 및 목적 : 디지털화된 채용 시장에서 구직자와 기업 간의 효과적인 소통과 정보 공유의 필요성이 증가하고 있습니다. 이 프로젝트는 구직자가 자신의 경력과 역량을 쉽게 관리하고, 기업이 적합한 인재를 신속하게 찾을 수 있도록 돕는 플랫폼을 개발하는 것을 목표로 합니다.</p>
+<hr />
+<pre><code>정현의 dlw0603@naver.com
+이동욱 ben896@nate.com
+한혜진 rose33hj@naver.com
+</code></pre>
+<hr />
+<h1 id="index-_2">프로젝트 결과물</h1>
+<ul>
+<li><a href="https://github.com/users/RI4RU/projects/2/views/4">스케줄 관리</a></li>
+<li><a href="#문서-1_프로젝트_과제_수행_계획서.md">프로젝트 과제 수행 계획서</a></li>
+<li><a href="#문서-2_하브루타_노트_목록.md">하부르타노트 목록</a></li>
+<li><a href="../문서/3_팀_프로젝트_결과보고서.pptx">PPT 발표자료</a></li>
+<li><a href="#문서-4_프로젝트_성찰지_목록.md">프로젝트 성찰지 목록</a></li>
+</ul>
+<p>https://github.com/user-attachments/assets/05bac0da-f8bf-4dac-bd55-a577830ab04f</p>
+<p>https://github.com/user-attachments/assets/e28097bf-ea79-4fa7-a1b4-9536b13f1a8f</p>
+<hr /></section><section class="print-page" id="1_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ea%b3%bc%ec%a0%9c_%ec%88%98%ed%96%89_%ea%b3%84%ed%9a%8d%ec%84%9c"><h1 id="1_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ea%b3%bc%ec%a0%9c_%ec%88%98%ed%96%89_%ea%b3%84%ed%9a%8d%ec%84%9c-1-프로젝트-과제-수행-계획서">1 프로젝트 과제 수행 계획서</h1><table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의(팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+<tr>
+<td><strong>계획서 제출일</strong></td>
+<td>2025.01.08</td>
+</tr>
+<tr>
+<td><strong>프로젝트 결과물 유형</strong></td>
+<td>Github, PPT</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="1_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ea%b3%bc%ec%a0%9c_%ec%88%98%ed%96%89_%ea%b3%84%ed%9a%8d%ec%84%9c-_1">프로젝트 개요</h3>
+<p>프로젝트 주제 : 사용자 맞춤형 이력 관리 및 직무 연계 서비스를 제공하여 구직자와 기업 간 효율적인 매칭을 지원하는 웹 기반 플랫폼</p>
+<p>배경 및 목적 : 디지털화된 채용 시장에서 구직자와 기업 간의 효과적인 소통과 정보 공유의 필요성이 증가하고 있습니다. 이 프로젝트는 구직자가 자신의 경력과 역량을 쉽게 관리하고, 기업이 적합한 인재를 신속하게 찾을 수 있도록 돕는 플랫폼을 개발하는 것을 목표로 합니다.</p>
+<hr />
+<h3 id="1_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ea%b3%bc%ec%a0%9c_%ec%88%98%ed%96%89_%ea%b3%84%ed%9a%8d%ec%84%9c-_2">요구 사항</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 유스케이스 다이어그램</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 요구사항 정의서, 기능 정의서, 인터페이스 정의서</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 웹화면 UI 설계, 사용자 시나리오</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 테이블 설계, ERD</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 테이블 명세서</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> [기업 및 구직자] 등록 및 로그인</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> [기업] 채용공고 관리 - 보기/등록/수정/삭제</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> [기업] 지원현황 관리 - 보기/합격/불합격</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> [기업] 입사 제안</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> [구직자] 이력서 관리 - 보기/등록/수정/삭제</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> [구직자] 관심 기업 구독(북마크,스크랩)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 커뮤니티 고객센터 구현</li>
+</ul>
+<hr />
+<h3 id="1_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ea%b3%bc%ec%a0%9c_%ec%88%98%ed%96%89_%ea%b3%84%ed%9a%8d%ec%84%9c-_3">프로젝트 목표 (기술)</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 팀별 협업을 통해 코드 컨벤션의 중요성 알아가기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> JAVA 언어 개념잡기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 객체지향 프로그래밍 기법 개념잡기(추상화, 상속 등)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> MVC패턴, DTO, 유효성 체크 개념 잡기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> IoC, DI(의존성주입), JSTL문법, 개념 잡기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> SQL(서브쿼리, 조인), RDBMS, MyBatis 개념 잡기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> CRUD, 트랜잭션 이해 하기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Http 프로토콜 개념 잡기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Session, Cookie 개념 잡기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Content-Type 헤더, MIME Type 이해하기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> HTTP 통신 메서드(GET,POST,DELETE,PUT) 개념 잡기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 템플릿 엔진(JSP) 개념 잡기</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Github 이슈관리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Git 형상관리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Validation Check</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> File Upload</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Javascript Programing</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 통합 테스트 (Junit)</li>
+</ul>
+<hr />
+<h3 id="1_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ea%b3%bc%ec%a0%9c_%ec%88%98%ed%96%89_%ea%b3%84%ed%9a%8d%ec%84%9c-_4">프로젝트 임무 분담</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>구분</strong></th>
+<th style="text-align: left;"><strong>대상</strong></th>
+<th style="text-align: left;"><strong>세부 기능</strong></th>
+<th style="text-align: left;"><strong>진행 상태</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>전체적인 프로젝트 세팅</strong></td>
+<td style="text-align: left;">전원</td>
+<td style="text-align: left;">프로젝트 빌드 및 VCS 원격 저장소 구성</td>
+<td style="text-align: left;">완료</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>테이블 설계하기</strong></td>
+<td style="text-align: left;">전원</td>
+<td style="text-align: left;">구인구직 사이트에 필요한 테이블 설계. 화면 설계를 기반으로 테이블을 작성</td>
+<td style="text-align: left;">완료</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>프로젝트 기획</strong></td>
+<td style="text-align: left;">전원</td>
+<td style="text-align: left;">구인 구직 사이트에 대한 필요 기능 및 화면 기획</td>
+<td style="text-align: left;">완료</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>화면 설계하기 및 구현하기</strong></td>
+<td style="text-align: left;">전원</td>
+<td style="text-align: left;">구인구직 사이트에 맞는 화면을 ppt로 그림을 그려 틀을 잡고 figma앱을 사용하여 디테일하게 설계</td>
+<td style="text-align: left;">완료</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>개인 메인 페이지</strong></td>
+<td style="text-align: left;">정현의</td>
+<td style="text-align: left;">Post 테이블의 CRUD 생성<br>관련된 Skill 테이블의 CRUD 생성<br>개인이 보아야 하는 공고 메인 페이지의 쿼리와 공고 디테일 페이지의 쿼리<br>기업에서의 제출된 이력서(제안) 보기 및 합격 불합격 공지<br>개인에서의 지원 이력 확인하기</td>
+<td style="text-align: left;">완료</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>개인 입장에서의 공고를 스킬 필터링</strong></td>
+<td style="text-align: left;">정현의</td>
+<td style="text-align: left;">Skill 테이블의 CRUD 생성<br>Skill에 있는 스킬들로 공고 및 이력서의 스킬을 필터링</td>
+<td style="text-align: left;">완료</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>기업의 공고 관리</strong></td>
+<td style="text-align: left;">이동욱</td>
+<td style="text-align: left;">Post 테이블의 CRUD 생성<br>관련된 Skill 테이블의 CRUD 생성<br>개인이 보아야 하는 공고 메인 페이지의 쿼리와 공고 디테일 페이지의 쿼리<br>기업에서의 제출된 이력서(제안) 보기 및 합격 불합격 공지<br>개인에서의 지원 이력 확인하기</td>
+<td style="text-align: left;">완료</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>개인 이력서 관리</strong></td>
+<td style="text-align: left;">정현의</td>
+<td style="text-align: left;">Resume의 CRUD 생성<br>관련된 Skill 테이블의 CRUD 생성<br>및 사진 첨부</td>
+<td style="text-align: left;">완료</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>이력서 지원하기</strong></td>
+<td style="text-align: left;">정현의</td>
+<td style="text-align: left;">지원하기 누르면 나오는 model 화면 생성<br>이력서를 선택해서 구인공고에 지원하기<br>이미 지원한 공고에는 지원할 수 없도록 하기</td>
+<td style="text-align: left;">진행 중</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>개인 및 기업의 회원가입 및 로그인</strong></td>
+<td style="text-align: left;">한혜진</td>
+<td style="text-align: left;">User와 Person, Company 테이블의 CRUD 생성<br>Person의 경우 관심 Skill 테이블의 CRUD 생성</td>
+<td style="text-align: left;">완료</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>JUnitTest</strong></td>
+<td style="text-align: left;">미구현</td>
+<td style="text-align: left;">- 개인, 기업 회원가입<br>- 개인, 기업 로그인<br>- 개인, 기업 개인정보 보기 수정하기<br>- 개인 이력서 보기, 쓰기, 수정하기, 삭제하기<br>- 개인 이력서 지원하기에 대한 JUnit Test를 해본다.</td>
+<td style="text-align: left;">미구현</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>JUnitTest</strong></td>
+<td style="text-align: left;">미구현</td>
+<td style="text-align: left;">- 개인 메인 공고 보기<br>- 개인 마감시간 보기<br>- 개인 추천 공고 보기<br>- 기업 제출된 이력서 보기 및 합불합 하기<br>- 기업 추천 이력서 보기</td>
+<td style="text-align: left;">미구현</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>개인의 공고 스크랩하기</strong></td>
+<td style="text-align: left;">한혜진</td>
+<td style="text-align: left;">각자의 스크랩을 통해 자신의 페이지에서 따로 볼 수 있도록 한다.<br>person_scrap_tb, company_scrap_tb에 CRD 생성</td>
+<td style="text-align: left;">완료</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>이력서 공개 비공개 설정</strong></td>
+<td style="text-align: left;">정현의</td>
+<td style="text-align: left;">개인 회원이 대표로 등록한 이력서에 대해서 검색이 가능하도록 한다.<br>대표로 등록한 이력서가 없다면 검색되지 않는다.<br>Resume 테이블에서 컬럼 추가</td>
+<td style="text-align: left;">완료</td>
+</tr>
+</tbody>
+</table></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%eb%aa%a9%eb%a1%9d"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%eb%aa%a9%eb%a1%9d-_1">공통과제</h1>
+<ul>
+<li><a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8%20%ea%b0%9c%eb%b0%9c%20%ed%99%98%ea%b2%bd%20%ea%b5%ac%ec%b6%95%2c%20%ed%98%91%ec%97%85%20%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4%20%ea%b0%9c%eb%b0%9c">프로그램 개발 환경 구축</a></li>
+</ul>
+<h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%eb%aa%a9%eb%a1%9d-_2">정현의</h1>
+<ul>
+<li><a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ea%b3%b5%ea%b3%a0%ed%8e%98%ec%9d%b4%ec%a7%80%29">하브루타노트(정현의,공고페이지)</a></li>
+<li><a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%eb%a7%88%ec%9d%b4%ed%8e%98%ec%9d%b4%ec%a7%80%29">하브루타노트(정현의,마이페이지)</a></li>
+<li><a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%9d%b4%eb%a0%a5%ec%84%9c%ed%8e%98%ec%9d%b4%ec%a7%80%29">하브루타노트(정현의,이력서페이지)</a></li>
+<li><a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%a7%80%ec%9b%90%ed%8e%98%ec%9d%b4%ec%a7%80%29">하브루타노트(정현의,지원페이지)</a></li>
+<li></li>
+</ul>
+<h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%eb%aa%a9%eb%a1%9d-_3">이동욱</h1>
+<ul>
+<li><a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b81_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b8%b0%ec%97%85%eb%a9%94%ec%9d%b8%ed%8e%98%ec%9d%b4%ec%a7%80">하브루타노트(이동욱/기업메인페이지)</a></li>
+<li><a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b82_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a3%bc%ec%9a%94%ea%b8%b0%eb%8a%a5%eb%a7%81%ed%81%ac%ea%b5%ac%ed%98%84">하브루타노트(이동욱/주요기능링크)</a></li>
+<li><a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b83_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%82%ac%ec%9a%a9%ec%9e%90%ec%9d%b8%ec%a6%9d%ea%b8%b0%eb%8a%a5%ea%b5%ac%ed%98%84">하브루타노트(이동욱/사용자인증기능)</a></li>
+<li><a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b84_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b6%8c%ed%95%9c%ea%b4%80%eb%a6%ac%ea%b5%ac%ed%98%84">하브루타노트(이동욱/권한관리)</a></li>
+<li><a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b85_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b3%b5%ea%b3%a0%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84">하브루타노트(이동욱/공고관리페이지)</a></li>
+<li><a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b86_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a7%80%ec%9b%90%ec%9e%90%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84">하브루타노트(이동욱/지원자관리페이지)</a></li>
+</ul>
+<h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%eb%aa%a9%eb%a1%9d-_4">한혜진</h1>
+<ul>
+<li><a href="#2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8%28db%2c%ec%8a%a4%ed%81%ac%eb%9e%a9%29_%ed%95%9c%ed%98%9c%ec%a7%84">하브루타노트(한혜진/데이터베이스,스크랩)</a></li>
+</ul></section><section class="print-page" id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%eb%aa%a9%eb%a1%9d"><ul>
+<li><a href="#4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98">정현의</a></li>
+<li><a href="#4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1">이동욱</a></li>
+<li><a href="#4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84">한혜진</a></li>
+</ul></section>
+                        <h1 class='nav-section-title' id='section-2-하브루타-노트'>
+                            2 하브루타 노트 <a class='headerlink' href='#section-2-하브루타-노트' title='Permanent link'>↵</a>
+                        </h1>
+                        <section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8%28db%2c%ec%8a%a4%ed%81%ac%eb%9e%a9%29_%ed%95%9c%ed%98%9c%ec%a7%84"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8%28db%2c%ec%8a%a4%ed%81%ac%eb%9e%a9%29_%ed%95%9c%ed%98%9c%ec%a7%84-_1">하브루타노트(한혜진/데이터베이스,스크랩)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의(팀장), 한혜진, 이동욱</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>데이터베이스 전반, 스크랩 기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.21</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>한혜진</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8%28db%2c%ec%8a%a4%ed%81%ac%eb%9e%a9%29_%ed%95%9c%ed%98%9c%ec%a7%84-1">1. 작업이해도</h3>
+<p>데이터베이스, 스크랩 기능 설계 및 구현</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8%28db%2c%ec%8a%a4%ed%81%ac%eb%9e%a9%29_%ed%95%9c%ed%98%9c%ec%a7%84-2">2. 작업계획</h3>
+<p><strong>데이터베이스 설계 및 구현</strong>
+- 데이터베이스 테이블 명세서 작성
+- 데이터베이스 테이블 생성</p>
+<p><strong>스크랩 기능 설계 및 구현</strong>
+- 스크랩 목록 조회 페이지 구현
+- 스크랩 목록 정렬 기능 구현
+- 채용공고 스크랩 기능 구현
+- 스크랩 목록 삭제 기능 구현
+- 스크랩 목록에서 아이템 클릭 시 채용공고 페이지로 연결</p>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8%28db%2c%ec%8a%a4%ed%81%ac%eb%9e%a9%29_%ed%95%9c%ed%98%9c%ec%a7%84-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8%28db%2c%ec%8a%a4%ed%81%ac%eb%9e%a9%29_%ed%95%9c%ed%98%9c%ec%a7%84-3">3. 관찰기록</h3>
+<ul>
+<li>데이터베이스 명세서 작성에 상당한 시간이 소요되었다.</li>
+<li>작업 도중 데이터베이스 구조 변경이 필요한 경우가 있었다.</li>
+</ul>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8%28db%2c%ec%8a%a4%ed%81%ac%eb%9e%a9%29_%ed%95%9c%ed%98%9c%ec%a7%84-4">4. 본인의견</h3>
+<p>내 작업영역에 집중하는 과정에서 팀원이 정의한 데이터 타입이나 식별자와 관련해 혼란이 생기는 경우가 있었다.
+이러한 문제를 방지하려면 사전 논의를 통해 데이터 타입과 식별자 규칙을 최대한 통일해야 할 것 같다.</p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1-_1">하브루타노트(이동욱/기업페이지)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의 (팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>기업 페이지 제작</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.20</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>이동욱</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1-1">1. 작업이해도</h3>
+<p>기업 메인 페이지를 설계하고
+세부 페이지 제작 연결과 팀원들의 페이지 연결하는 작업</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1-2">2. 작업계획</h3>
+<p>기업 메인페이지 제작</p>
+<ul>
+<li>간단한 header,footer 제작</li>
+<li>UI 작업 기반으로 큰 틀 구성 </li>
+<li>
+<p>기업 메인 페이지 필요 링크 구현
+    기업,개인 메인페이지
+    로그인
+    회원가입
+    구직자 검색</p>
+</li>
+<li>
+<p>구직자 검색을 메인 페이지에 노출하게 구현
+    기능은 구현x</p>
+</li>
+<li>
+<p>로그인 로그아웃 기능 구현</p>
+</li>
+<li>
+<p>회원 가입 기능 구현</p>
+</li>
+<li>
+<p>로그인 된 사람만 확인 가능하게 구현
+    공고 관리
+    지원자 관리
+    기업 관리</p>
+</li>
+<li>
+<p>공고 관리 페이지 구현</p>
+</li>
+<li>지원자 관리 페이지 구현</li>
+</ul>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1-3">3. 관찰기록</h3>
+<p>초반 팀원과의 의사소통에 굉장히 큰 어려움이 있었다</p>
+<p>MVC에 대해 전혀 기초가 없어 많은 어려움이 있었다.
+DB에 연결하는 방법을 전혀 몰라 많은 어려움이 있었다.
+SQL 명령문을 전혀 몰라 많은 어려움이 있었다.
+DB의 테이블 내용을 읽어내는데 굉장히 많은 어려움이 있었다.
+각 테이블의 값으로 정보를 합치는 것은 너무 많은 시간이 걸렸다.
+후반에 패키지와 파일들의 이름이 정확한 체계를 따르지 않아 엉망진창이 되어버렸다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1-4">4. 본인의견</h3>
+<p>초반 의사소통의 부재로 gitignore, 사용할 udtl, 라이브러리 선택에 어려움이 있었다.
+소통은 중요하다.</p>
+<p>DB가 많이 정교해서 페이지 구현하는데 많은 도움을 받았다.
+하지만 소통의 부재로 하나하나 읽어가며 파악하는데 시간이 많이 걸렸다..
+소통은 중요하다.</p>
+<p>작업을 하면서 코드를 직접 짜는건 아직 수준이 유치원생 수준도 안되는거 같다.
+작업의 60% 이상은 쳇GPT를 이용했다.
+이제 겨우 DB에서 정보를 끄집어내고 그 정보를 출력하거나 입력된 값을 DB에 넣는 방법 정도만 습득한거 같다.
+또한 SQL문을 모르니까 작성도 할 수 없어서 내가 꺼내는 값이 어떤 이름으로 받는지를 몰라 view에 출력할때 헛짓거리를 많이 했다.</p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8%20%ea%b0%9c%eb%b0%9c%20%ed%99%98%ea%b2%bd%20%ea%b5%ac%ec%b6%95%2c%20%ed%98%91%ec%97%85%20%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4%20%ea%b0%9c%eb%b0%9c"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8%20%ea%b0%9c%eb%b0%9c%20%ed%99%98%ea%b2%bd%20%ea%b5%ac%ec%b6%95%2c%20%ed%98%91%ec%97%85%20%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4%20%ea%b0%9c%eb%b0%9c-프로그램-개발-환경-구축-협업-프로세스-개발">프로그램 개발 환경 구축, 협업 프로세스 개발</h1><table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의(팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8%20%ea%b0%9c%eb%b0%9c%20%ed%99%98%ea%b2%bd%20%ea%b5%ac%ec%b6%95%2c%20%ed%98%91%ec%97%85%20%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4%20%ea%b0%9c%eb%b0%9c-1">1. 작업이해도</h3>
+<p>Github를 통해 프로젝트 개발 환경을 구축하고 공유한다</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8%20%ea%b0%9c%eb%b0%9c%20%ed%99%98%ea%b2%bd%20%ea%b5%ac%ec%b6%95%2c%20%ed%98%91%ec%97%85%20%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4%20%ea%b0%9c%eb%b0%9c-2">2. 작업계획</h3>
+<ol>
+<li>메이븐프로젝트를 생성하고 Git에 연결</li>
+<li>팀원들이 프로젝트를 clone 하고 각자 개발에 착수</li>
+<li>임시 브랜치를 생성해 제대로 환경이 만들어졌는지 테스트</li>
+</ol>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8%20%ea%b0%9c%eb%b0%9c%20%ed%99%98%ea%b2%bd%20%ea%b5%ac%ec%b6%95%2c%20%ed%98%91%ec%97%85%20%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4%20%ea%b0%9c%eb%b0%9c-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8%20%ea%b0%9c%eb%b0%9c%20%ed%99%98%ea%b2%bd%20%ea%b5%ac%ec%b6%95%2c%20%ed%98%91%ec%97%85%20%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4%20%ea%b0%9c%eb%b0%9c-3">3. 관찰기록</h3>
+<p>.gitignore 설정의 미스로 개발환경구축에 어려움을 겪었음
+pull 과정에서 많은 충돌이 발생함</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8%20%ea%b0%9c%eb%b0%9c%20%ed%99%98%ea%b2%bd%20%ea%b5%ac%ec%b6%95%2c%20%ed%98%91%ec%97%85%20%ed%94%84%eb%a1%9c%ec%84%b8%ec%8a%a4%20%ea%b0%9c%eb%b0%9c-4">4. 본인의견</h3>
+<p>정현의 : 팀프로젝트에 있어서 공통개발을 할때 첫 단추를 잘 꿰어야한다는 것을 배웠습니다.</p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b81_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b8%b0%ec%97%85%eb%a9%94%ec%9d%b8%ed%8e%98%ec%9d%b4%ec%a7%80"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b81_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b8%b0%ec%97%85%eb%a9%94%ec%9d%b8%ed%8e%98%ec%9d%b4%ec%a7%80-_1">하브루타노트 (이동욱/기업 메인페이지 기본 구조 설계)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의 (팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>기업 메인페이지 기본 구조 설계</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.13</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>이동욱</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b81_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b8%b0%ec%97%85%eb%a9%94%ec%9d%b8%ed%8e%98%ec%9d%b4%ec%a7%80-1">1. 작업이해도</h3>
+<p>기업 메인페이지의 기본 구조를 설계하고 구현하는 작업.
+페이지의 전체적인 레이아웃을 결정하는 중요한 단계로, 사용자 경험과 직결되는 핵심 작업입니다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b81_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b8%b0%ec%97%85%eb%a9%94%ec%9d%b8%ed%8e%98%ec%9d%b4%ec%a7%80-2">2. 작업계획</h3>
+<ul>
+<li>간단한 header와 footer 제작</li>
+<li>UI 작업을 기반으로 전체적인 레이아웃 구성</li>
+<li>페이지의 주요 섹션 배치 결정</li>
+<li>반응형 디자인 적용을 위한 기본 구조 설계</li>
+</ul>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b81_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b8%b0%ec%97%85%eb%a9%94%ec%9d%b8%ed%8e%98%ec%9d%b4%ec%a7%80-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b81_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b8%b0%ec%97%85%eb%a9%94%ec%9d%b8%ed%8e%98%ec%9d%b4%ec%a7%80-3">3. 관찰기록</h3>
+<p>Header와 footer 디자인에 예상보다 많은 시간이 소요되었습니다.
+특히 모든 페이지에 일관되게 적용될 요소이기 때문에 신중하게 접근해야 했습니다.</p>
+<p>반응형 디자인 구현에 어려움을 겪었습니다. 
+다양한 화면 크기에 대응하는 레이아웃을 설계하는 것이 핵심이었습니다.</p>
+<p>팀원들과의 디자인 의견 조율이 필요했지만 소통의 부재로 쉽지 않았습니다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b81_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b8%b0%ec%97%85%eb%a9%94%ec%9d%b8%ed%8e%98%ec%9d%b4%ec%a7%80-4">4. 본인의견</h3>
+<p>팀원들과의 전체적인 디자인 의견 조율이 필요했지만 소통의 부재로 쉽지 않았습니다.
+초반 의사소통의 부재로 gitignore, 사용할 udtl, 라이브러리 선택에 어려움이 있었습니다.</p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b82_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a3%bc%ec%9a%94%ea%b8%b0%eb%8a%a5%eb%a7%81%ed%81%ac%ea%b5%ac%ed%98%84"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b82_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a3%bc%ec%9a%94%ea%b8%b0%eb%8a%a5%eb%a7%81%ed%81%ac%ea%b5%ac%ed%98%84-_1">하브루타노트(이동욱/주요 기능 링크 구현)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의 (팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>주요 기능 링크 구현</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.14</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>이동욱</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b82_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a3%bc%ec%9a%94%ea%b8%b0%eb%8a%a5%eb%a7%81%ed%81%ac%ea%b5%ac%ed%98%84-1">1. 작업이해도</h3>
+<p>기업 메인 페이지에 필요한 주요 기능들의 링크를 구현하는 작업입니다. 
+사용자가 메인 페이지에서 쉽게 원하는 페이지로 이동할 수 있도록 하는 것이 목표입니다. </p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b82_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a3%bc%ec%9a%94%ea%b8%b0%eb%8a%a5%eb%a7%81%ed%81%ac%ea%b5%ac%ed%98%84-2">2. 작업계획</h3>
+<ul>
+<li>기업 및 개인 메인페이지 링크 추가</li>
+<li>로그인 및 회원가입 페이지 링크 구현</li>
+<li>구직자 검색 기능을 메인 페이지에 노출 (기능 구현 제외)</li>
+<li>각 링크의 위치와 디자인 결정</li>
+<li>링크 클릭 시 페이지 전환 효과 구현</li>
+</ul>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b82_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a3%bc%ec%9a%94%ea%b8%b0%eb%8a%a5%eb%a7%81%ed%81%ac%ea%b5%ac%ed%98%84-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b82_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a3%bc%ec%9a%94%ea%b8%b0%eb%8a%a5%eb%a7%81%ed%81%ac%ea%b5%ac%ed%98%84-3">3. 관찰기록</h3>
+<p>링크 구현 자체는 기술적으로 어렵지 않았지만, 일관성을 유지하는 것이 어려웠 습니다.
+각 요소들을 메인 페이지에 어떻게 배치할지 고민이 많았습니다.
+최대한 디자인적 요소는 버리고 프로그램이 돌아가는것에 목표를 두었습니다.</p>
+<p>페이지 전환 시 사용자에게 피드백을 주는 방법을 생각하는 것에 예상보다 많은 시간이 소요되었습니다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b82_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a3%bc%ec%9a%94%ea%b8%b0%eb%8a%a5%eb%a7%81%ed%81%ac%ea%b5%ac%ed%98%84-4">4. 본인의견</h3>
+<p>링크 구현은 기술적으로 어렵지 않았지만, 사용자 경험(UX)을 고려하여 배치하는 것이 중요하다는 것을 깨달았습니다. 단순히 기능을 구현하는 것을 넘어서, 사용자의 입장에서 생각하고 설계하는 것이 웹 개발에서 핵심임을 배웠습니다.</p>
+<p>이번 작업을 통해 프론트엔드 개발에서 기능과 디자인, 사용자 경험이 얼마나 밀접하게 연관되어 있는지 깨달았습니다.
+앞으로는 이러한 요소들을 더욱 균형 있게 고려하며 개발하고 싶습니다.</p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b83_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%82%ac%ec%9a%a9%ec%9e%90%ec%9d%b8%ec%a6%9d%ea%b8%b0%eb%8a%a5%ea%b5%ac%ed%98%84"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b83_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%82%ac%ec%9a%a9%ec%9e%90%ec%9d%b8%ec%a6%9d%ea%b8%b0%eb%8a%a5%ea%b5%ac%ed%98%84-_1">하브루타노트(이동욱/사용자 인증 기능 구현)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의 (팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>사용자 인증 기능 구현</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.15</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>이동욱</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b83_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%82%ac%ec%9a%a9%ec%9e%90%ec%9d%b8%ec%a6%9d%ea%b8%b0%eb%8a%a5%ea%b5%ac%ed%98%84-1">1. 작업이해도</h3>
+<p>로그인, 로그아웃, 회원가입 등 사용자 인증과 관련된 기능을 구현하는 작업입니다.
+이는 웹 애플리케이션의 사용자 데이터 관리에 핵심적인 부분으로, 정확성과 안전성이 매우 중요합니다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b83_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%82%ac%ec%9a%a9%ec%9e%90%ec%9d%b8%ec%a6%9d%ea%b8%b0%eb%8a%a5%ea%b5%ac%ed%98%84-2">2. 작업계획</h3>
+<ul>
+<li>로그인 기능 구현 (아이디/비밀번호 DB와 일치)</li>
+<li>로그아웃 기능 구현</li>
+<li>회원가입 기능 개발</li>
+<li>세션 관리 시스템 설계 및 구현</li>
+</ul>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b83_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%82%ac%ec%9a%a9%ec%9e%90%ec%9d%b8%ec%a6%9d%ea%b8%b0%eb%8a%a5%ea%b5%ac%ed%98%84-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b83_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%82%ac%ec%9a%a9%ec%9e%90%ec%9d%b8%ec%a6%9d%ea%b8%b0%eb%8a%a5%ea%b5%ac%ed%98%84-3">3. 관찰기록</h3>
+<p>SQL 기초가 부족하여 데이터베이스 연결과 쿼리 작성에 많은 시간이 소요되었습니다.</p>
+<p>세션 관리에 대한 이해가 부족하여 추가 학습이 필요했습니다.
+특히 로그인 처리, 세션 만료 시간 설정 등에 대해 깊이 있는 이해가 필요했습니다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b83_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%82%ac%ec%9a%a9%ec%9e%90%ec%9d%b8%ec%a6%9d%ea%b8%b0%eb%8a%a5%ea%b5%ac%ed%98%84-4">4. 본인의견</h3>
+<p>사용자 인증 기능은 생각보다 복잡하고 보안적으로 중요한 부분이 많다는 것을 알게 되었습니다.</p>
+<p>또한, 사용자 경험 측면에서도 개선할 점이 많다고 느꼈습니다.
+예를 들어, 로그인 실패 시 적절한 에러 메시지 제공, 비밀번호 강도 체크 기능 등을 추가하면 더 나은 서비스를 제공할 수 있을 것 같습니다.</p>
+<p>사용자 인증은 거의 모든 웹 서비스에서 필요한 기능이므로, 이번 경험을 바탕으로 더 효율적이고 안전한 인증 시스템을 구축할 수 있는 능력을 키우고 싶습니다.</p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b84_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b6%8c%ed%95%9c%ea%b4%80%eb%a6%ac%ea%b5%ac%ed%98%84"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b84_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b6%8c%ed%95%9c%ea%b4%80%eb%a6%ac%ea%b5%ac%ed%98%84-_1">하브루타노트(이동욱/권한 관리 구현)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의 (팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>권한 관리 구현</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.15</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>이동욱</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b84_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b6%8c%ed%95%9c%ea%b4%80%eb%a6%ac%ea%b5%ac%ed%98%84-1">1. 작업이해도</h3>
+<p>로그인한 사용자만 접근 가능한 페이지를 설정하고, 사용자의 권한에 따라 페이지 접근을 제어하는 기능을 구현합니다.
+이는 웹 애플리케이션의 사용자별 기능 제공을 위해 중요한 작업입니다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b84_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b6%8c%ed%95%9c%ea%b4%80%eb%a6%ac%ea%b5%ac%ed%98%84-2">2. 작업계획</h3>
+<ul>
+<li>로그인 사용자 전용 페이지 설정 (공고 관리, 지원자 관리, 기업 관리)</li>
+<li>세션을 이용한 로그인 상태 확인 로직 구현</li>
+<li>권한에 따른 페이지 접근 제어 메커니즘 개발</li>
+<li>권한 없는 사용자 접근 시 리다이렉션 구현</li>
+</ul>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b84_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b6%8c%ed%95%9c%ea%b4%80%eb%a6%ac%ea%b5%ac%ed%98%84-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b84_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b6%8c%ed%95%9c%ea%b4%80%eb%a6%ac%ea%b5%ac%ed%98%84-3">3. 관찰기록</h3>
+<p>세션 관리에 예상보다 많은 시간이 소요되었습니다. 특히 여러 페이지에 걸쳐 일관된 권한 체크를 적용하는 것이 쉽지 않았습니다.</p>
+<p>권한이 없는 사용자의 접근 시 적절한 에러 처리와 리다이렉션 구현이 필요했습니다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b84_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b6%8c%ed%95%9c%ea%b4%80%eb%a6%ac%ea%b5%ac%ed%98%84-4">4. 본인의견</h3>
+<p>권한 관리 구현을 통해 웹 애플리케이션의 보안 중요성을 깨달았습니다. 세션 관리와 권한 체크는 모든 페이지에 영향을 미치는 중요한 기능이므로, 초기 설계 단계에서 더 신중히 고려해야 한다는 점을 배웠습니다.</p>
+<p>또한, 권한 관리와 관련된 코드가 여러 곳에 중복되는 문제를 발견했습니다. </p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b85_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b3%b5%ea%b3%a0%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b85_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b3%b5%ea%b3%a0%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84-_1">하브루타노트(이동욱/공고 관리 페이지 구현)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의 (팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>공고 관리 페이지 구현</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.17</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>이동욱</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b85_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b3%b5%ea%b3%a0%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84-1">1. 작업이해도</h3>
+<p>기업 사용자가 <strong>채용 공고를 등록/수정/삭제</strong>하고 지원자 현황을 관리할 수 있는 페이지 구현.<br />
+데이터베이스와의 연동을 통해 CRUD 기능을 수행하며, 복잡한 테이블 관계(기업-공고-지원자)를 처리해야 하는 작업입니다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b85_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b3%b5%ea%b3%a0%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84-2">2. 작업계획</h3>
+<table>
+<thead>
+<tr>
+<th>기능 분류</th>
+<th>상세 구현 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CRUD 기능</strong></td>
+<td>공고 등록 폼 개발, 수정/삭제 버튼 연동</td>
+</tr>
+<tr>
+<td><strong>검색/필터링</strong></td>
+<td>학력/경력/자격증 검색, 모집상태(진행/마감) 필터링</td>
+</tr>
+<tr>
+<td><strong>상태 관리</strong></td>
+<td>공고 상태 변경 처리 로직</td>
+</tr>
+<tr>
+<td><strong>UI 구성</strong></td>
+<td>직관적으로 한 페이지 내에서 등록 수정 삭제</td>
+</tr>
+</tbody>
+</table>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b85_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b3%b5%ea%b3%a0%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b85_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b3%b5%ea%b3%a0%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84-3">3. 관찰기록</h3>
+<p>회원가입에 사용했던 CRUD에 대한 개념을 확실히 정리하지 않고 넘어와 조금 시간이 걸렸으나.. 이번 활동을 통해서 확실하게 CRUD의 본질을 이해했습니다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b85_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ea%b3%b5%ea%b3%a0%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84-4">4. 본인의견</h3>
+<p>CRUD의 본질 이해
+    단순 기능 구현을 넘어 트랜잭션 관리(<code>@Transactional</code>)의 중요성을 체감.<br />
+    ex) 공고 삭제 시 지원자 데이터 동시 삭제 필요 → <code>CASCADE</code> 옵션 추가</p>
+<p>이 작업을 통해 데이터 흐름의 종단간 처리(End-to-End)를 경험했으며, 백엔드-프론트엔드 연동 메커니즘에 대한 이해도가 크게 향상되었습니다. </p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b86_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a7%80%ec%9b%90%ec%9e%90%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b86_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a7%80%ec%9b%90%ec%9e%90%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84-_1">하브루타노트(이동욱/지원자 관리 페이지 구현)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의 (팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>지원자 관리 페이지 구현</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.17</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>이동욱</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b86_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a7%80%ec%9b%90%ec%9e%90%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84-1">1. 작업이해도</h3>
+<p>기업 사용자가 <strong>채용 공고별 지원자 목록</strong>을 확인하고, 지원자의 상태(서류 검토/면접/합격 등)를 관리할 수 있는 페이지 구현.
+복잡한 데이터 관계(공고-지원자-이력서)를 처리하며, 개인정보 보호 규정을 준수하면서 효율적인 데이터 표시가 필요한 작업입니다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b86_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a7%80%ec%9b%90%ec%9e%90%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84-2">2. 작업계획</h3>
+<table>
+<thead>
+<tr>
+<th>기능 분류</th>
+<th>상세 구현 내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>목록 조회</strong></td>
+<td>공고별 지원자 테이블 연결 (이름/지원일/상태)</td>
+</tr>
+<tr>
+<td><strong>상태 관리</strong></td>
+<td>드롭다운 메뉴를 통한 상태 변경</td>
+</tr>
+<tr>
+<td><strong>검색/필터링</strong></td>
+<td>이름/지원일 범위/상태 다중 조건 검색</td>
+</tr>
+<tr>
+<td><strong>상세 정보</strong></td>
+<td>기본 정보 표시 및 상세페이지 이동</td>
+</tr>
+</tbody>
+</table>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b86_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a7%80%ec%9b%90%ec%9e%90%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b86_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a7%80%ec%9b%90%ec%9e%90%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84-3">3. 관찰기록</h3>
+<p>흩어져 있는 테이블들을 연결해서 데이터를 뽑아 와야하는데 직접 참여한 DB가 아니라 테이블간의 연결을 확인하는데 많은 시간이 들었고 기초가 부족한 쿼리문 작성(join문)에 많은 시간이 들었습니다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b86_%ec%9d%b4%eb%8f%99%ec%9a%b1_%ec%a7%80%ec%9b%90%ec%9e%90%ea%b4%80%eb%a6%ac%ed%8e%98%ec%9d%b4%ec%a7%80%ea%b5%ac%ed%98%84-4">4. 본인의견</h3>
+<p>초기 DB 검토 미흡으로 인한 구조 수정 반복 → 다음 프로젝트에선 정규화 검토 시간 확보 필요
+이 작업을 통해 테이블 끼리의 key를 활용하여 데이터를 추출하는걸 확실히 배웠습니다.</p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1-_1">하브루타노트(이동욱/기업페이지)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의 (팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>기업 페이지 제작</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.20</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>이동욱</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1-1">1. 작업이해도</h3>
+<p>기업 메인 페이지를 설계하고
+세부 페이지 제작 연결과 팀원들의 페이지 연결하는 작업</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1-2">2. 작업계획</h3>
+<p>기업 메인페이지 제작</p>
+<ul>
+<li>간단한 header,footer 제작</li>
+<li>UI 작업 기반으로 큰 틀 구성 </li>
+<li>
+<p>기업 메인 페이지 필요 링크 구현
+    기업,개인 메인페이지
+    로그인
+    회원가입
+    구직자 검색</p>
+</li>
+<li>
+<p>구직자 검색을 메인 페이지에 노출하게 구현
+    기능은 구현x</p>
+</li>
+<li>
+<p>로그인 로그아웃 기능 구현</p>
+</li>
+<li>
+<p>회원 가입 기능 구현</p>
+</li>
+<li>
+<p>로그인 된 사람만 확인 가능하게 구현
+    공고 관리
+    지원자 관리
+    기업 관리</p>
+</li>
+<li>
+<p>공고 관리 페이지 구현</p>
+</li>
+<li>지원자 관리 페이지 구현</li>
+</ul>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1-3">3. 관찰기록</h3>
+<p>초반 팀원과의 의사소통에 굉장히 큰 어려움이 있었다</p>
+<p>MVC에 대해 전혀 기초가 없어 많은 어려움이 있었다.
+DB에 연결하는 방법을 전혀 몰라 많은 어려움이 있었다.
+SQL 명령문을 전혀 몰라 많은 어려움이 있었다.
+DB의 테이블 내용을 읽어내는데 굉장히 많은 어려움이 있었다.
+각 테이블의 값으로 정보를 합치는 것은 너무 많은 시간이 걸렸다.
+후반에 패키지와 파일들의 이름이 정확한 체계를 따르지 않아 엉망진창이 되어버렸다.</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8_%ec%9d%b4%eb%8f%99%ec%9a%b1-4">4. 본인의견</h3>
+<p>초반 의사소통의 부재로 gitignore, 사용할 udtl, 라이브러리 선택에 어려움이 있었다.
+소통은 중요하다.</p>
+<p>DB가 많이 정교해서 페이지 구현하는데 많은 도움을 받았다.
+하지만 소통의 부재로 하나하나 읽어가며 파악하는데 시간이 많이 걸렸다..
+소통은 중요하다.</p>
+<p>작업을 하면서 코드를 직접 짜는건 아직 수준이 유치원생 수준도 안되는거 같다.
+작업의 60% 이상은 쳇GPT를 이용했다.
+이제 겨우 DB에서 정보를 끄집어내고 그 정보를 출력하거나 입력된 값을 DB에 넣는 방법 정도만 습득한거 같다.
+또한 SQL문을 모르니까 작성도 할 수 없어서 내가 꺼내는 값이 어떤 이름으로 받는지를 몰라 view에 출력할때 헛짓거리를 많이 했다.</p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ea%b3%b5%ea%b3%a0%ed%8e%98%ec%9d%b4%ec%a7%80%29"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ea%b3%b5%ea%b3%a0%ed%8e%98%ec%9d%b4%ec%a7%80%29-하브루타노트-정현의-공고페이지-">하브루타노트(정현의,공고페이지)</h1><table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의(팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>공고페이지 제작</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.14</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>정현의</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ea%b3%b5%ea%b3%a0%ed%8e%98%ec%9d%b4%ec%a7%80%29-1">1. 작업이해도</h3>
+<p>공고리스트를 확인하고 조건별로 검색 공고를 확인할 수 있는 기능을 구현한다</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ea%b3%b5%ea%b3%a0%ed%8e%98%ec%9d%b4%ec%a7%80%29-2">2. 작업계획</h3>
+<ol>
+<li>메인화면에서 공고리스트가 출력되도록 설정</li>
+<li>전체 공고리스트를 볼수 있는 페이지를 구성</li>
+<li>조건에 따라서 공고 범위를 좁힐 수 있도록 구성</li>
+<li>공고를 누르면 공고를 볼수 있게 구현</li>
+</ol>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ea%b3%b5%ea%b3%a0%ed%8e%98%ec%9d%b4%ec%a7%80%29-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ea%b3%b5%ea%b3%a0%ed%8e%98%ec%9d%b4%ec%a7%80%29-3">3. 관찰기록</h3>
+<p>공고 리스트를 출력하는 부분을 문제없이 구현에 성공했으나 리스트에서 공고문을 확인하는 기능 구현이 조금 아쉬웠다</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ea%b3%b5%ea%b3%a0%ed%8e%98%ec%9d%b4%ec%a7%80%29-4">4. 본인의견</h3>
+<p>페이지에서 공고 리스트를 출력해야하는 만큼 반복문의 사용이 잦고 서블릿과 페이지의 데이터 상호작용이 긴밀하게 이루어져야하는 부분에서 시행착오가 약간 발생했습니다.
+프로그램내 변수명의 통일성과 명확성이 어째서 중요한지를 배울 수 있었습니다.</p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%eb%a7%88%ec%9d%b4%ed%8e%98%ec%9d%b4%ec%a7%80%29"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%eb%a7%88%ec%9d%b4%ed%8e%98%ec%9d%b4%ec%a7%80%29-하브루타노트-정현의-마이페이지-">하브루타노트(정현의,마이페이지)</h1><table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의(팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>마이 페이지 제작</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.13</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>정현의</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%eb%a7%88%ec%9d%b4%ed%8e%98%ec%9d%b4%ec%a7%80%29-1">1. 작업이해도</h3>
+<p>마이페이지를 설계하고 회원정보를 변경할 수 있도록 한다</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%eb%a7%88%ec%9d%b4%ed%8e%98%ec%9d%b4%ec%a7%80%29-2">2. 작업계획</h3>
+<ol>
+<li>마이페이지를 작성</li>
+<li>회원정보변경 페이지를 작성</li>
+<li>회원정보변경 기능을 구현</li>
+</ol>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%eb%a7%88%ec%9d%b4%ed%8e%98%ec%9d%b4%ec%a7%80%29-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%eb%a7%88%ec%9d%b4%ed%8e%98%ec%9d%b4%ec%a7%80%29-3">3. 관찰기록</h3>
+<p>개인 회원으로 할 수 있는 모든 기능의 중간다리 역할을 하기 때문에 링크 누락의 실수가 많았다</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%eb%a7%88%ec%9d%b4%ed%8e%98%ec%9d%b4%ec%a7%80%29-4">4. 본인의견</h3>
+<p>페이지 제작 자체는 어렵지 않았으나 페이지의 구성과 다른 팀원이 작업한 부분에 대해서 연결을 잊는 실수가 발생하고 개발과정에서 여러 팀원이 접근해야하는 페이지이기 때문에 병합과정에서 충돌이 자주 발생했기에 의사소통의 중요성을 느꼈습니다.</p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%9d%b4%eb%a0%a5%ec%84%9c%ed%8e%98%ec%9d%b4%ec%a7%80%29"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%9d%b4%eb%a0%a5%ec%84%9c%ed%8e%98%ec%9d%b4%ec%a7%80%29-하브루타노트-정현의-이력서페이지-">하브루타노트(정현의,이력서페이지)</h1><table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의(팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>이력서페이지 제작</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.16</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>정현의</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%9d%b4%eb%a0%a5%ec%84%9c%ed%8e%98%ec%9d%b4%ec%a7%80%29-1">1. 작업이해도</h3>
+<p>마이페이지에서 자신의 이력서들을 확인하고 이력서를 작성 수정 삭제하는 기능을 만든다</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%9d%b4%eb%a0%a5%ec%84%9c%ed%8e%98%ec%9d%b4%ec%a7%80%29-2">2. 작업계획</h3>
+<ol>
+<li>이력서목록을 볼 수 있는 페이지 작성</li>
+<li>마이페이지에서 이력서목록 페이지 연결</li>
+<li>이력서목록에서 이력서를 눌러 열람가능하게 만들기</li>
+<li>이력서 작성 기능 구현</li>
+<li>이력서 수정/삭제 기능 구현</li>
+</ol>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%9d%b4%eb%a0%a5%ec%84%9c%ed%8e%98%ec%9d%b4%ec%a7%80%29-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%9d%b4%eb%a0%a5%ec%84%9c%ed%8e%98%ec%9d%b4%ec%a7%80%29-3">3. 관찰기록</h3>
+<p>이력서를 작성함에 있어 이력서 자체만이 아니라 이력서에 기입되어야 하는 정보의 구성에 어려움을 겪었다</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%9d%b4%eb%a0%a5%ec%84%9c%ed%8e%98%ec%9d%b4%ec%a7%80%29-4">4. 본인의견</h3>
+<p>이력서를 작성하는데 필요한 학력 경력 자격증 같은 많은 정보를 한번에 다루는 것이 쉽지않았습니다. 추후에는 기획단계에서 데이터베이스 구성을 더 치밀하게 제작과정에서 변경해야할 사항이 있다면 과감하게 변경해서 데이터의 직관성을 높이고 싶습니다.</p></section><section class="print-page" id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%a7%80%ec%9b%90%ed%8e%98%ec%9d%b4%ec%a7%80%29"><h1 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%a7%80%ec%9b%90%ed%8e%98%ec%9d%b4%ec%a7%80%29-하브루타노트-정현의-지원페이지-">하브루타노트(정현의,지원페이지)</h1><table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의(팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<table>
+<thead>
+<tr>
+<th>맡은 임무</th>
+<th>지원페이지 제작</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>작성일</td>
+<td>2025.01.17</td>
+</tr>
+<tr>
+<td>훈련생명</td>
+<td>정현의</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%a7%80%ec%9b%90%ed%8e%98%ec%9d%b4%ec%a7%80%29-1">1. 작업이해도</h3>
+<p>공고페이지에서 지원하기를 통해 지원페이지로 이동하고 해당 공고에 지원할 수 있도록 한다</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%a7%80%ec%9b%90%ed%8e%98%ec%9d%b4%ec%a7%80%29-2">2. 작업계획</h3>
+<ol>
+<li>공고페이지에서 지원을 누르면 지원이 등록되도록 구현</li>
+<li>각 계정에서 지원한 목록을 확인할 수 있도록 구현</li>
+<li>지원을 확인하고 지원을 취소하는 등의 동작을 수행할 수 있도록 구현</li>
+</ol>
+<h2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%a7%80%ec%9b%90%ed%8e%98%ec%9d%b4%ec%a7%80%29-3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%a7%80%ec%9b%90%ed%8e%98%ec%9d%b4%ec%a7%80%29-3">3. 관찰기록</h3>
+<p>공고에 지원하고 지원한 내용과 상태를 확인할 수 있도록 잘 만들었다</p>
+<h3 id="2_%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80_%eb%85%b8%ed%8a%b8-%ed%95%98%eb%b8%8c%eb%a3%a8%ed%83%80%eb%85%b8%ed%8a%b8%28%ec%a0%95%ed%98%84%ec%9d%98%2c%ec%a7%80%ec%9b%90%ed%8e%98%ec%9d%b4%ec%a7%80%29-4">4. 본인의견</h3>
+<p>해당 기능을 작성하는데 어려움은 없었으나 페이지 구성과 기능 구현에 대해 직관성이 떨어지는 문제가 있었습니다. 해당 기능은 다른 팀원이 작업중인 영역과도 교집합이 생기기때문에 서로간의 의사소통으로 문제해결능력을 기를 수 있었습니다.</p></section><h1 class='nav-section-title-end'>Ended: 2 하브루타 노트</h1>
+                        <h1 class='nav-section-title' id='section-4-프로젝트-성찰지'>
+                            4 프로젝트 성찰지 <a class='headerlink' href='#section-4-프로젝트-성찰지' title='Permanent link'>↵</a>
+                        </h1>
+                        <section class="print-page" id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1"><h1 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1-_1">프로젝트 성찰지(이동욱)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의 (팀장), 이동욱, 한혜진</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1-1">1. 프로젝트 결과물에 대한 만족도</h3>
+<hr />
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 하</li>
+</ul>
+<p>첫 프로젝트이기도 하고 아무런 지식이 없어서 엉망 진창으로 만들어 만족도가 매우 낮다.
+하지만 어떻게 굴러가지는 알게되어서 수업때 배웠던 간단한 홈페이지 제작을 집에서도 해볼 계획이고 한두개 만들면 머리속에 박힐거 같다.
+또한 협동 프로젝트할때 소통의 필요성을 굉장히 많이 느꼈다.
+내가 답답한게 있으면 상대도 답답하다 생각을해서 어느정도 진행되었는지 어떤걸 수정했는지 꾸준히 공유하고 대화하는게 중요하단걸 느꼈다.
+아직 만든 작업물들의 코드를 다시 치라고하면 한참 걸리겠지만 방향을 알게되어서 성장의 밑거름이 되어 이부분은 만족스럽다
+</aside></p>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1-2">2. 프로젝트 수행 과정 성찰 기준</h3>
+<hr />
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1-1_1">(1) 배움</h3>
+<p>이번 프로젝트의 주제와 목표, 그리고 활동 내용에 대해 잘 알고 있다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 하</li>
+</ul>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1-2_1">(2) 탐구</h3>
+<p>적극적인 탐구 질문으로 새로운 것을 배우기 위해 노력하였다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 하</li>
+</ul>
+<h4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1-3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1-3">(3) 협력</h3>
+<p>팀 내에서 동료 훈련생들을 배려하고 준종하며 협력을 잘 하였다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 하</li>
+</ul>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1-4">(4) 참여</h3>
+<p>팀원들과 토의하고 프로젝트 수행 활동에 적극적으로 참여하였다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 하</li>
+</ul>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%9d%b4%eb%8f%99%ec%9a%b1-3_1">3. 더하고 빼고 곱하고 나누고 싶은 내용</h3>
+<hr />
+<table>
+<thead>
+<tr>
+<th>제목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>문제해결능력</td>
+<td>데이터들이 어떻게 보내지고 받아지는지 어떤 구조로 되어있는지에 관한 실력향상이 크게 된 것 같다.</td>
+</tr>
+<tr>
+<td>대인관계능력</td>
+<td>코드짤때 막히는 부분이 정말 많았는데 팀장의 도움으로 정말 많은 오류를 해쳐나갔다.. 정말 감사하다. 또한 팀원들간의 다리 역활을 해주어 프로젝트 진행에 많은 도움을 받았다.</td>
+</tr>
+<tr>
+<td>자원관리능력</td>
+<td>아직 수준 미달이다.</td>
+</tr>
+<tr>
+<td>차후프로젝트에대한다짐</td>
+<td>기획 단계에서 소통은 정말 중요하다. 또 테이블 정리가 정말 깔끔했는데 기획 단계에서 잘 짜야 프로젝트 진행할 때 막힘이 없음을 배웠다.. 아직 많이 부족하지만 공부를 좀 더 해서 다음 프로젝트는 팀원들에게 민폐 끼치지 말아야겠다.</td>
+</tr>
+</tbody>
+</table></section><section class="print-page" id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98"><h1 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98-_1">프로젝트 성찰지(정현의)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>고길동(팀장), 둘리, 도우너, 마이콜</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98-1">1. 프로젝트 결과물에 대한 만족도</h3>
+<hr />
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label>  상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label>  중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label>  하</li>
+</ul>
+<p>처음 맡는 프로젝트, 처음 맡는 팀장의 역할로 인해 시행착오도 겪고 작품의 완성도도 높다고 말할 수 없지만 프로그래밍의 기초를 다질수 있게 되었음을 높게 평가했다.</p>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98-2">2. 프로젝트 수행 과정 성찰 기준</h3>
+<hr />
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98-1_1">(1) 배움</h3>
+<p>이번 프로젝트의 주제와 목표, 그리고 활동 내용에 대해 잘 알고 있다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label>  상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label>  중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label>  하</li>
+</ul>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98-2_1">(2) 탐구</h3>
+<p>적극적인 탐구 질문으로 새로운 것을 배우기 위해 노력하였다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label>  상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label>  중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label>  하</li>
+</ul>
+<h4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98-3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98-3">(3) 협력</h3>
+<p>팀 내에서 동료 훈련생들을 배려하고 준종하며 협력을 잘 하였다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label>  상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label>  중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label>  하</li>
+</ul>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98-4">(4) 참여</h3>
+<p>팀원들과 토의하고 프로젝트 수행 활동에 적극적으로 참여하였다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label>  상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label>  중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label>  하</li>
+</ul>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ec%a0%95%ed%98%84%ec%9d%98-3_1">3. 더하고 빼고 곱하고 나누고 싶은 내용</h3>
+<hr />
+<table>
+<thead>
+<tr>
+<th>제목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>문제해결능력</td>
+<td>웹앱개발을 통해서 데이터들의 상호작용에 대한 이해가 이전보다 크게 향상되었고 에러와 예외의 대응이 빨라졌다.</td>
+</tr>
+<tr>
+<td>대인관계능력</td>
+<td>사무적인 대화조차 하지않던 삭막한 사이에서 프로젝트 진행을 통해 최소한의 비지니스적인 대화는 가능한 수준으로 향상되었다.</td>
+</tr>
+<tr>
+<td>자원관리능력</td>
+<td>협력개발방식이 처음이기에 서로가 만든 부분에 대해서 내용을 알 수 없고 허둥지둥 개발하다보니 프로젝트 진행기록도 소홀히 대하는 등 자원관리에 대해서 거의 신경쓰지 못한 점을 반성했다.</td>
+</tr>
+<tr>
+<td>차후 프로젝트에대한다짐</td>
+<td>의사소통이 원활히 이루어지지 않아서 기획부터 프로젝트 진행 내내 난항을 겪었다. 협력개발이 처음이어서 개발환경 구축에서도 문제가 있었다.<br>차후 프로젝트 부터는 보다 적극적으로 의견을 내고 의사소통을 통해 프로젝트를 완성도 있게 제작하도록 할 것이다</td>
+</tr>
+</tbody>
+</table></section><section class="print-page" id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84"><h1 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84-_1">프로젝트 성찰지(한혜진)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>훈련과정</strong></th>
+<th>자바&amp;Springboot 크로스 플랫폼(풀스택)융합 응용SW개발자 양성과정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>훈련기간</strong></td>
+<td>2024.10.28~2025.04.18</td>
+</tr>
+<tr>
+<td><strong>훈련교사</strong></td>
+<td>박민</td>
+</tr>
+<tr>
+<td><strong>프로젝트 유형</strong></td>
+<td>팀(협동)</td>
+</tr>
+<tr>
+<td><strong>팀원</strong></td>
+<td>정현의(팀장), 한혜진, 이동욱</td>
+</tr>
+<tr>
+<td><strong>프로젝트 기간</strong></td>
+<td>2025.01.08 ~ 2024.01.21</td>
+</tr>
+<tr>
+<td><strong>프로젝트명</strong></td>
+<td>휴먼 클라우드 이력관리 플랫폼 웹개발</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84-1">1. 프로젝트 결과물에 대한 만족도</h3>
+<hr />
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 하</li>
+</ul>
+<p>프론트엔드 영역이 미흡하며, 전체적으로 일관성이 부족하다.</p>
+</aside>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84-2">2. 프로젝트 수행 과정 성찰 기준</h3>
+<hr />
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84-1_1">(1) 배움</h3>
+<p>이번 프로젝트의 주제와 목표, 그리고 활동 내용에 대해 잘 알고 있다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 하</li>
+</ul>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84-2_1">(2) 탐구</h3>
+<p>적극적인 탐구 질문으로 새로운 것을 배우기 위해 노력하였다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 하</li>
+</ul>
+<h4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84-3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84-3">(3) 협력</h3>
+<p>팀 내에서 동료 훈련생들을 배려하고 준종하며 협력을 잘 하였다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 하</li>
+</ul>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84-4">(4) 참여</h3>
+<p>팀원들과 토의하고 프로젝트 수행 활동에 적극적으로 참여하였다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 상</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 중</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 하</li>
+</ul>
+<h3 id="4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80-4_%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8_%ec%84%b1%ec%b0%b0%ec%a7%80_%ed%95%9c%ed%98%9c%ec%a7%84-3_1">3. 더하고 빼고 곱하고 나누고 싶은 내용</h3>
+<hr />
+<table>
+<thead>
+<tr>
+<th>제목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>문제해결능력</td>
+<td>프로젝트를 진행하면서 백엔드와 프론트엔드 간 데이터 흐름을 이해하게 되었고, 이를 통해 전체 동작 과정을 파악하는 능력이 향상되었다.</td>
+</tr>
+<tr>
+<td>대인관계능력</td>
+<td>작업 진행에 필요한 소통이 가능하게 되었다.</td>
+</tr>
+<tr>
+<td>자원관리능력</td>
+<td>진행 상황에 대한 기록이 미흡했다.</td>
+</tr>
+<tr>
+<td>차후프로젝트에대한다짐</td>
+<td>진행 상황을 체계적으로 구조화하고, 더욱 효율적인 소통이 필요할 것이다.</td>
+</tr>
+</tbody>
+</table></section><h1 class='nav-section-title-end'>Ended: 4 프로젝트 성찰지</h1></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
